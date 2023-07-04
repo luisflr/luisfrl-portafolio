@@ -1,0 +1,84 @@
+ul .btn-social {
+  position: relative;
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  vertical-align: center;
+  align-items: center;
+  box-shadow: 0 0px 3px rgba(2, 28, 52, 1);
+  transition: 0.5s;
+  background: #020507
+}
+
+ul .btn-social:hover {
+  width: 120px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+}
+
+.linkedin:hover {
+  background: rgb(0,192,223);
+  background: linear-gradient(90deg, rgba(0,192,223,1) 0%, rgba(0,124,240,1) 100%);
+}
+
+.github:hover {
+  background: rgb(91,91,91);
+  background: linear-gradient(90deg, rgba(91,91,91,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.mail:hover {
+  background: rgb(223,82,0);
+  background: linear-gradient(90deg, rgba(223,82,0,1) 0%, rgba(240,0,0,1) 100%);
+}
+
+ul .btn-social .icon-container {
+  content: '';
+  position: absolute;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+ul .btn-social:hover .icon-container{
+    opacity: 0;
+}
+
+ul .btn-social .icon-description {
+    content: '';
+    position: absolute;
+    top: 13px;
+    width: 100%;
+    height: 100px;
+    border-radius: 60px;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: -1;
+    color: #fff;
+    font-size: 16px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+ul .btn-social .icon {
+    color: #777;
+    font-size: 10px !important;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+
+ul .btn-social span {
+    position: absolute;
+}
+
+ul .btn-social:hover .icon-description  {
+    transform: scale(1);
+    transition-delay: 0.25s;
+    opacity: 1;
+    z-index: 10;
+}
