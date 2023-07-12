@@ -1,39 +1,200 @@
-import React from "react";
+import React, { useState } from "react";
 
-import incabeneficios from '../../assets/images/incabeneficios.png';
 import vozy from '../../assets/images/vozy-logo.png';
-import captiq from '../../assets/images/captiq-logo.png';
-import kuna from '../../assets/images/kuna-logo.png';
-import routex from '../../assets/images/routex.png';
+import code from '../../assets/images/code.png';
+import { WORKS as works } from './utils/constants';
 
 export default function Experience() {
+  
+  const [activeWork, setActiveWork] = useState('1');
+
   return (
-    <div className="xl:flex w-full h-screen flex-col items-center justify-center">
-      <div className="w-[1000px] flex flex-col text-center justify-center sm:-mb-12 md:-mb-12 xl:mb-12 2xl:mb-12">
-        <p className="text-white text-4xl font-bold mb-10">
-          Experience
-        </p>
-        <div className='grid grid-cols-3 gap-4 bg-background1 w-full h-[515px]'>
-          <div className='flex h-[240px] rounded-lg justify-center bg-background1 opacity-50 transition transform hover:scale-110 hover:translate-y-4 hover:z-10 hover:cursor-pointer hover:opacity-100 hover:shadow-default'>
-            <img className='object-contain' src={vozy} alt='vozy'/>
-          </div>
-          <div className='flex h-[240px] rounded-lg bg-background1 px-3 opacity-50 transition transform hover:scale-110 hover:translate-y-4 hover:z-10 hover:cursor-pointer hover:opacity-100 hover:shadow-default'>
-            <p className='flex items-center text-5xl text-white font-bold'>Wintell</p><p className='flex items-center text-5xl text-[#47A6BE] font-bold'>Invest</p>
-          </div>
-          <div className='flex justify-center px-3 bg-background1 h-[240px] opacity-50 transition transform hover:scale-110 hover:translate-y-4 hover:z-10 hover:cursor-pointer hover:opacity-100 hover:shadow-default'>
-            <img className='object-contain' src={kuna} alt='kuna'/>
-          </div>
-          <div className='flex h-[240px] rounded-lg justify-center bg-background1 opacity-50 transition transform hover:scale-110 hover:z-10 hover:cursor-pointer hover:opacity-100 hover:shadow-default'>
-            <img className='w-full rounded-lg' src={incabeneficios} alt='incabeneficios'/>
-          </div>
-          <div className='flex h-[240px] rounded-lg bg-[#c0ebf7] px-3 justify-center opacity-50 transition transform hover:scale-110 hover:z-10 hover:cursor-pointer hover:opacity-100 hover:shadow-default'>
-            <img className='object-contain' src={captiq} alt='captiq'/>
-          </div>
-          <div className='flex h-[240px] rounded-lg bg-white justify-center opacity-50 transition transform hover:scale-110 hover:z-10 hover:cursor-pointer hover:opacity-100 hover:shadow-default'>
-            <img className='object-contain w-full' src={routex} alt='routex'/>
+    <section className='xl:flex w-full relative h-[700px] sm:h-[900px] lg:h-screen flex-col items-center justify-center'>
+      <div className='w-full px-5 sm:px-20 lg:px-0 flex text-center justify-center items-center sm:-mb-12 md:-mb-12 xl:mb-12 2xl:mb-12'>
+        <div className='flex flex-col w-full lg:w-[750px]'>
+          <p className={`text-3xl items-center flex text-[#A3B3BC] font-bold font-sans mb-4 pr-2 
+            after:content-[""] after:block after:relative after:grow after:h-[1px]
+            after:ml-[20px] after:bg-[#A3B3BC]`}>
+          · Experience
+          </p>
+          <div className='w-full overflow-x-auto overflow-hidden'>
+            <ol className="items-center w-[750px] justify-between flex space-x-8 space-y-0 mt-3 mb-5">
+            {works.map((work, idx) => {
+              return (
+                  <li
+                    key={`works-${idx}`}
+                    className="flex items-center space-x-3 cursor-pointer"
+                    onClick={() => setActiveWork(work.id)}
+                  >
+                    <span
+                      className={`border ${activeWork === work.id ? 'border-sky' : 'border-[#A3B3BC]' } transition transform flex items-center justify-center w-8 h-8 rounded-full shrink-0`}
+                    >
+                      <svg
+                        className='w-[21px] h-[21px]'version="1.0" xmlns="http://www.w3.org/2000/svg"
+                        width="50.000000pt" height="50.000000pt" viewBox="0 0 50.000000 50.000000"
+                        preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
+                          fill={`${activeWork === work.id ? '#007CF0' : '#A3B3BC'}`} stroke="none">
+                          <path d="M183 440 c-10 -24 -24 -40 -45 -48 -32 -12 -34 -35 -2 -41 18 -3 34
+                            -18 34 -33 0 -4 -24 -8 -52 -10 l-53 -3 0 -115 0 -115 68 -3 c65 -3 89 -18 47
+                            -29 -47 -12 -14 -23 70 -23 84 0 117 11 70 23 -42 11 -18 26 48 29 l67 3 0
+                            115 0 115 -52 3 c-29 2 -53 6 -53 10 0 15 16 30 34 33 31 6 31 29 -1 41 -18 7
+                            -34 24 -44 47 -15 36 -17 37 -69 37 -52 0 -53 -1 -67 -36z m55 8 c8 -8 15 -8
+                            26 1 20 17 33 7 41 -30 4 -19 15 -33 27 -37 15 -4 17 -7 6 -13 -18 -12 -160
+                            -11 -178 1 -13 8 -12 10 3 10 11 0 23 15 33 40 17 43 23 47 42 28z m-16 -130
+                            c-9 -9 -15 -9 -24 0 -9 9 -7 12 12 12 19 0 21 -3 12 -12z m80 0 c-9 -9 -15 -9
+                            -24 0 -9 9 -7 12 12 12 19 0 21 -3 12 -12z m118 -128 l0 -100 -59 0 c-64 0
+                            -71 6 -71 61 0 16 -5 29 -11 29 -8 0 -9 -21 -4 -70 l7 -70 -32 0 -32 0 7 70
+                            c5 49 4 70 -4 70 -6 0 -11 -13 -11 -29 0 -55 -7 -61 -71 -61 l-59 0 0 100 0
+                            100 170 0 170 0 0 -100z"
+                            className='transition transform'
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                    <span>
+                        <h3
+                          className={`${activeWork === work.id ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue to-cyan' : 'text-[#A3B3BC]'} transition transform w-fit font-medium leading-tight`}
+                        >
+                          {work.name}
+                        </h3>
+                        <p
+                          className={`${activeWork === work.id ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue to-cyan' : 'text-[#A3B3BC]'} transition transform w-fit font-medium leading-tight text-sm`}
+                        >
+                          {work.period}
+                        </p>
+                    </span>
+                  </li>
+              )})}
+              </ol>
+            </div>
+          <div className='flex flex-col pl-0 pt-3 mt-5 h-[320px] overflow-y-auto border-l border-[#A3B3BC]'>
+            {'1' === activeWork &&
+              <div className='animate-[appear_0.5s_ease-in] opacity-1 max-w-[750px] pl-6 pr-2'>
+                <div className='flex mb-3 items-center'>
+                  <a href='https://www.vozy.co/' target='_blank' rel='noreferrer' className='cursor-pointer'>
+                    <img src={vozy} alt='vozy' className='h-8 mr-2'/>
+                  </a>
+                  <p className='text-[#A3B3BC] text-xl'>VOZY</p>
+                </div>
+                <p className='text-[#A3B3BC] text-left mb-2 font-open-sans font-bold tracking-wide leading-relaxed'>
+                  I worked as a software developer focused only on the front-end side, consuming REST services for the implementation of new modules.
+                  <br/>
+                  In addition, the SCRUM methodology was applied, so I belonged to a work team and my day-to-day tools were the following:
+                </p>
+                <ul className='text-sm font-open-sans font-bold tracking-wide'>
+                    <li key={`active-work${1}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        ReactJs
+                      </p>
+                    </li>
+                    <li key={`active-work${2}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        Auth0
+                      </p>
+                    </li>
+                    <li key={`active-work${3}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        ReactFlow
+                      </p>
+                    </li>
+                    <li key={`active-work${4}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        Git
+                      </p>
+                    </li>
+                  </ul>
+              </div>
+            }
+            {'2' === activeWork && 
+              <div className='animate-[appear_0.5s_ease-in] opacity-1 max-w-[750px] pl-6 pr-2'>
+                <div className='flex mb-3 items-center'>
+                  <a href='https://kipu-software.pe/' target='_blank' rel='noreferrer' className='cursor-pointer'>
+                    <img src='https://kipu-software.pe/web/image/website/1/logo/Kipu%20Software?unique=d64322b' alt='kipu software' className='h-8 w-28 mr-2'/>
+                  </a>
+                  <p className='text-[#A3B3BC] text-xl'>Kipu Software</p>
+                </div>
+                <p className='text-[#A3B3BC] text-sm text-left mb-2 font-open-sans font-bold tracking-wide leading-relaxed'>
+                  I worked as a Frontend developer with the React library, building
+                  friendly and responsive web systems. Also, I started to develop API
+                  with the Django framework, applying all the security criteria and
+                  efficiency.
+                  <br/>
+                  I finished my period working on a project for a German company
+                  dedicated to investments, which helped me to familiarize myself with the projects
+                  large scale
+                </p>
+                <ul>
+                    <li key={`active-work${5}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        ReactTs
+                      </p>
+                    </li>
+                    <li key={`active-work${6}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        Angular
+                      </p>
+                    </li>
+                    <li key={`active-work${7}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        Ionic
+                      </p>
+                    </li>
+                    <li key={`active-work${8}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        Django
+                      </p>
+                    </li>
+                    <li key={`active-work${9}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        Bitbucket - Git
+                      </p>
+                    </li>
+                  </ul>
+              </div>
+            }
+            {'3' === activeWork &&
+              <div className='animate-[appear_0.5s_ease-in] max-w-[750px] pl-6 pr-2'>
+                <div className='flex mb-3 items-center'>
+                  <a href='https://co-de.com.pe/' target='_blank' rel='noreferrer' className='cursor-pointer'>
+                    <img src={code} alt='code' className='h-8 mr-2'/>
+                  </a>
+                  <p className='text-[#A3B3BC] text-xl'>Co-de</p>
+                </div>
+                <p className='text-[#A3B3BC] text-sm text-left mb-2 font-open-sans font-bold tracking-wide leading-relaxed'>
+                  During this period I worked as a FullStack developer, applying my
+                  knowledge in the development of web and mobile applications, as well as
+                  <br/>
+                  I also started to implement some APIs with the Lumen micro-framework.
+                </p>
+                <ul>
+                    <li key={`active-work${10}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        Angular
+                      </p>
+                    </li>
+                    <li key={`active-work${11}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        Flutter
+                      </p>
+                    </li>
+                    <li key={`active-work${12}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        Lumen
+                      </p>
+                    </li>
+                    <li key={`active-work${13}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]' >
+                        Gitlab - Git
+                      </p>
+                    </li>
+                  </ul>
+              </div>
+            }
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

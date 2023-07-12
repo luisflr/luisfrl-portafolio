@@ -11,7 +11,7 @@ const Footer = () => {
     window.open(link)
   }
   return (
-    <div className='w-screen bg-transparent h-20 justify-center items-center flex fixed bottom-0 z-40'>
+    <footer className='w-screen bg-transparent h-20 justify-center items-center flex fixed bottom-0 z-40'>
       <ul className='flex relative gap-[25px]'>
         <li className='btn-social linkedin'>
             <a
@@ -50,7 +50,7 @@ const Footer = () => {
             <span className='icon-description'>Mail</span>
         </li>
       </ul>
-    </div>
+    </footer>
   )
 }
 

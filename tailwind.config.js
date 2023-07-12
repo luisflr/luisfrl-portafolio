@@ -5,8 +5,7 @@ module.exports = {
     ],
     theme: {
       colors: {
-        'background': '#050b0f',
-        'background1': '#020507',
+        'background': '#242424',
         'blue': '#1fb6ff',
         'purple': '#7e5bef',
         'pink': '#ff49db',
@@ -42,15 +41,24 @@ module.exports = {
         'prompt': ['Prompt', 'sans-serif'],
         'sans': ['Calibre', 'Inter', '"San Francisco"', '"SF Pro Text"', '-apple-system', 'system-ui', 'sans-serif'],
         'serif': ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+        'open-sans': ['"Open Sans"', 'sans-serif']
       },
       extend: {
+        animation: {
+          appear: 'appear 0.5s ease-in'
+        },
         backgroundImage: {
-          'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+          'gradient-radial': 'radial-gradient(circle, rgba(2,104,105,1) 0%, rgba(5,11,15,1) 70%)',
         },
         boxShadow: {
-          'default': '0 2px 8px 0px rgba(2, 28, 52, 1)',
+          'default': '2px 10px 77px -6px rgba(0, 0, 0, 1)',
           'icons': '0 5px 10px rgba(0, 0, 0, 0.1)',
           'iconsHover': '0 10px 25px rgba(0, 0, 0, 0)'
+        },
+        keyframes: {
+          appear: {
+            '0%': { opacity: '0'},
+          }
         }
       },
     },

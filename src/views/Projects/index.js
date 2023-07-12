@@ -1,29 +1,57 @@
 import React from "react";
 
+import Project from './Project';
+
+import {
+  PROJECTS as projects
+} from './utils/constants';
+import Cards from '../../components/Common/Cards';
+
 export default function Projects() {
+  
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center">
-      <div className="w-[300px] h-full xl:w-[780px] flex flex-col text-center justify-center sm:-mb-12 md:-mb-12 xl:mb-12 2xl:mb-12">
-        <p className="text-transparent bg-clip-text bg-gradient-to-b from-white to-[#AAAAAA] text-4xl font-bold mb-10">
-          Projects
+    <section className="w-full flex flex-col items-center justify-center">
+      <div className='h-fit max-w-[1124px] px-5 sm:px-20 md:w-full lg:px-0 lg:w-10/12 flex flex-col justify-center items-start'>
+        <p className={`
+          text-3xl items-center flex text-[#A3B3BC] font-bold font-sans mb-10 pr-2 
+          float-left w-full
+          after:content-[""] after:block after:relative after:grow after:h-[1px]
+          after:ml-[20px] after:bg-[#A3B3BC]
+          lg:w-1/2
+          `}>
+          · Projects
         </p>
-        <p className="text-white text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
-          lacus lectus. Aliquam rutrum a tortor a imperdiet. Sed sed nisi sed
-          purus cursus ultrices. Etiam mollis lacus at pellentesque efficitur.
-          Phasellus ac ex a nunc tristique eleifend. Suspendisse non sapien
-          aliquam, pharetra nisi ut, pulvinar risus. Sed congue diam nec ex
-          bibendum, elementum ornare quam luctus. Orci varius natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. In bibendum
-          suscipit purus, et congue enim sollicitudin sit amet. Donec magna
-          tellus, sollicitudin non enim eget, volutpat accumsan turpis. Donec
-          tellus mi, volutpat vel diam ac, malesuada imperdiet diam. Duis auctor
-          odio non quam tempus, quis malesuada lectus semper. Nullam vestibulum
-          libero at nisl venenatis, ac ullamcorper ipsum convallis. Curabitur
-          scelerisque fringilla massa et elementum. Sed vitae mollis leo, vitae
-          gravida ipsum. Aliquam ut ex bibendum, ultrices nisl eu, rutrum quam.
-        </p>
+        <div className='hidden lg:block'>
+          {projects.map((project, index) => (
+            <Project
+              key={`project-id-${index}`}
+              typeProject={project.typeProject}
+              image={project.image}
+              titleProject={project.title}
+              linksProject={project.links}
+              description={project.description}
+              techStack={project.techStack}
+              reverse={!(index % 2 === 0)}
+              typeDevice={project.type}
+              idx={index}
+            />
+          ))}
+        </div>
+        
+        <div className='w-full flex flex-col items-center justify-center lg:hidden'>
+          {projects.map((project, index) => 
+            <Cards 
+              key={`project-id-${index}`}
+              typeProject={project.typeProject}
+              image={project.image}
+              titleProject={project.title}
+              linksProject={project.links}
+              description={project.description}
+              techStack={project.techStack}
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

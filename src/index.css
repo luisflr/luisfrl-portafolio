@@ -2,4 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Comic+Neue:wght@700&family=Josefin+Sans:wght@800&family=Prompt:wght@500&display=swap');
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  box-shadow: none;
+}
+
+*::-webkit-scrollbar-track {
+  background: #242424;
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a3b3bca6 ;
+  border-radius: 5px;
+  border: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Comic+Neue:wght@700&family=Josefin+Sans:wght@700&family=Open+Sans:wght@300&family=Prompt:wght@500&display=swap');

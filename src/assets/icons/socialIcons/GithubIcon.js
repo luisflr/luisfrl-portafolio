@@ -4,7 +4,7 @@ const GithubIcon = ({ wrapperClassName}) => {
   return (
     <>
       <svg
-        className={`${wrapperClassName || ''} h-6 w-6 text-red-500`}
+        className={`${wrapperClassName || ''}`}
         width="24"
         height="24"
         viewBox="0 0 24 24"

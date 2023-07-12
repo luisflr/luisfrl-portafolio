@@ -10,9 +10,7 @@ ul .btn-social {
   text-align: center;
   vertical-align: center;
   align-items: center;
-  box-shadow: 0 0px 3px rgba(2, 28, 52, 1);
   transition: 0.5s;
-  background: #020507
 }
 
 ul .btn-social:hover {
