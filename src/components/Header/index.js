@@ -26,7 +26,7 @@ export default function Header() {
                 <span className="self-center hidden sm:block sm:text-xl whitespace-nowrap text-[#c5c3c3] font-comic font-thin">Luis FR</span>
             </a>
             <div className="flex items-center lg:order-2">
-                <a href="mailto:luisflr1997@gmail.com" className="text-[#e1e0e0] hidden lg:block transition transform font-open-sans font-bold hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple hover:to-pink hover:drop-shadow-[0px_0px_10px_10px_rgba(126,91,239)] rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">
+                <a href="mailto:luisflr1997@gmail.com" className="text-[#e1e0e0] hidden lg:block transition transform font-open-sans font-bold hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple hover:to-pink hover:shadow-[0px_0px_8px_3px_rgba(126,91,239)] rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">
                   CONTACT ME
                 </a>
                 <button className="flex lg:hidden  " onClick={() => setisOpen(!isOpen)} >

@@ -5,7 +5,7 @@ module.exports = {
     ],
     theme: {
       colors: {
-        'background': '#242424',
+        'background': '#000',
         'blue': '#1fb6ff',
         'purple': '#7e5bef',
         'pink': '#ff49db',
@@ -22,7 +22,8 @@ module.exports = {
         'red-gradient': '#ff4d4d',
         'orange-gradient': '#f9cb28',
         'purple-100': '#331230',
-        'blue-100': '#021c34'
+        'blue-100': '#021c34',
+        'default-text': '#A3B3BC'
       },
       borderWidth: {
         DEFAULT: '1px',

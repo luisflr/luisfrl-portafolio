@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import vozy from '../../assets/images/vozy-logo.png';
 import code from '../../assets/images/code.png';
+import kipu from '../../assets/images/Kipu-logo.png';
 import { WORKS as works } from './utils/constants';
 
 export default function Experience() {
@@ -111,7 +112,7 @@ export default function Experience() {
               <div className='animate-[appear_0.5s_ease-in] opacity-1 max-w-[750px] pl-6 pr-2'>
                 <div className='flex mb-3 items-center'>
                   <a href='https://kipu-software.pe/' target='_blank' rel='noreferrer' className='cursor-pointer'>
-                    <img src='https://kipu-software.pe/web/image/website/1/logo/Kipu%20Software?unique=d64322b' alt='kipu software' className='h-8 w-28 mr-2'/>
+                    <img src={kipu} alt='kipu software' className='h-8 w-28 mr-2'/>
                   </a>
                   <p className='text-[#A3B3BC] text-xl'>Kipu Software</p>
                 </div>

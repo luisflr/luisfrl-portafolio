@@ -9,7 +9,7 @@ function Overlay({ buttons, isOpen, selectedButton, setisOpen, setSelectedButton
   const selectedClassButton = 'text-transparent bg-clip-text bg-gradient-to-r from-blue to-cyan font-open-sans';
 
   return (
-    <div
+    <aside
       className={`${isOpen ? 'right-0' : '-right-[200px]'}
       absolute transition-all duration-500 w-[200px] h-screen 
       bg-background top-0 
@@ -24,7 +24,7 @@ function Overlay({ buttons, isOpen, selectedButton, setisOpen, setSelectedButton
           </li>
         )}
       </ul>
-    </div>
+    </aside>
   )
 }
 

@@ -1,11 +1,11 @@
 import React from "react";
 
-import Project from './Project';
+import Cards from '../../components/Common/Cards';
+import Timeline from './Timeline/Timeline';
 
 import {
   PROJECTS as projects
 } from './utils/constants';
-import Cards from '../../components/Common/Cards';
 
 export default function Projects() {
   
@@ -21,21 +21,9 @@ export default function Projects() {
           `}>
           · Projects
         </p>
+        
         <div className='hidden lg:block'>
-          {projects.map((project, index) => (
-            <Project
-              key={`project-id-${index}`}
-              typeProject={project.typeProject}
-              image={project.image}
-              titleProject={project.title}
-              linksProject={project.links}
-              description={project.description}
-              techStack={project.techStack}
-              reverse={!(index % 2 === 0)}
-              typeDevice={project.type}
-              idx={index}
-            />
-          ))}
+          <Timeline projects={projects}/>
         </div>
         
         <div className='w-full flex flex-col items-center justify-center lg:hidden'>

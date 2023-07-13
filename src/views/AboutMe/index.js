@@ -6,7 +6,7 @@ function AboutMe() {
       <div className='h-full w-full max-w-[1124px] px-5 sm:px-20 md:w-full lg:px-0 lg:w-10/12 flex flex-col xl:flex-row justify-center items-center'>
         <div className='flex relative justify-center items-center w-full xl:w-5/12 mb-4 sm:mb-12 lg:mb-10 xl:mb-0'>
           <div className='
-            w-fit h-fit bg-gradient-to-r from-sky to-cyan
+            w-fit h-fit 
             rounded-full p-[2px]
             hover:shadow-default
             xl:rounded-2xl '>
@@ -16,11 +16,10 @@ function AboutMe() {
               className={`
                 object-cover transition transform  
                 h-[200px] w-[200px] duration-300
-                bg-blue-100 rounded-full
-                opacity-90
-                hover:bg-background hover:opacity-100
+                rounded-full
+                hover:drop-shadow-[0_0_5px_cyan]
                 lg:w-[240px] lg:h-[240px]
-                xl:w-[300px] xl:h-[260px] xl:rounded-2xl
+                xl:w-[300px] xl:h-[260px] xl:rounded-none
                 2xl:h-[300px]
               `}
             />
@@ -37,11 +36,11 @@ function AboutMe() {
           <div className='w-fit h-fit bg-gradient-to-r from-sky to-cyan pl-[1px] pt-[1px]'>
             <div className='bg-background pl-4 pt-3 transition transform duration-300'>
               <div className='max-h-[430px] overflow-y-auto leading-relaxed'>
-                <p className='text-[#a3b3bcc5] font-open-sans font-bold tracking-wide mb-3'>
+                <p className='text-default-text font-open-sans font-bold tracking-wide mb-3'>
                   I am a dedicated, committed person who enjoys working in a team, so it is easy for me to maintain good communication. Likewise, I like 
                   to keep my environment tidy, whether it is the physical or virtual work space, this allows me to maintain control of my work and helps to adapt in any situation.
                 </p>
-                <p className='text-[#a3b3bcc5] font-open-sans font-bold tracking-wide mb-3'>
+                <p className='text-default-text font-open-sans font-bold tracking-wide mb-3'>
                   My interest in programming began in my last years of study at the &nbsp;
                   <a
                     href='https://bk.sjbdelasalle.edu.pe/sjb/index.html'
@@ -67,12 +66,12 @@ function AboutMe() {
                     >La Salle University</a>, 
                   where I successfully completed my studies.
                 </p>
-                <p className='text-[#a3b3bcc5] font-open-sans font-bold tracking-wide mb-2'>
+                <p className='text-default-text font-open-sans font-bold tracking-wide mb-2'>
                   I also like to be constantly learning, which is why I managed to complete some courses on Platzi and Udemy, 
                   to deepen my knowledge of the tools I use every day.
                 </p>
                 <div className='flex w-full mt-2'>
-                  <div className='text-[#a3b3bcc5] mr-5 font-sans'>
+                  <div className='text-default-text mr-5 font-sans'>
                     <p className='text-xl font-open-sans font-bold tracking-wide'>Platzi</p>
                     <ul>
                       <li className='flex items-center before:content-["▹"]  before:text-blue before:-ml-1 before:-mr-2'>
@@ -117,7 +116,7 @@ function AboutMe() {
                       </li>
                     </ul>
                   </div>
-                  <div className='text-[#a3b3bcc5] font-sans'>
+                  <div className='text-default-text font-sans'>
                     <p className='text-xl font-open-sans font-bold tracking-wide'>Udemy</p>
                     <ul>
                       <li className='flex items-center before:content-["▹"]  before:text-blue before:-ml-1 before:-mr-2'>

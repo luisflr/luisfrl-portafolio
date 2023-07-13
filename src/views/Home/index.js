@@ -24,14 +24,13 @@ function Home() {
             <a 
               href='https://luisfr.netlify.app/'
               target='_blank' rel='noreferrer'
-              className={`
-                  float-right w-fit bg-gradient-to-r from-cyan to-sky pb-[6px] pt-[5px] h-fit rounded-lg px-2 
-                  transition transform font-open-sans font-bold
-                  duration-500 tracking-wide
-                  hover:bg-gradient-to-r hover:from-background hover:to-background 
-                  hover:text-blue hover:shadow-sm hover:shadow-sky
-                `}>
+              className='float-right transition transform w-fit bg-gradient-to-r from-cyan to-sky h-fit rounded-lg p-[1px] hover:shadow-[0_0_15px_cyan]'>
+              <p className='
+                bg-transparent rounded-lg font-open-sans font-bold text-background px-4 py-2
+                transition transform tracking-wide
+                hover:bg-background hover:text-default-text'>
                 Earlier Version
+              </p>
             </a>
             </div>
         </div>
