@@ -7,9 +7,6 @@ import MailIcon from '../../assets/icons/socialIcons/MailIcon.js';
 import './footer.css'
 
 const Footer = () => {
-  const contact = (link, target) => {
-    window.open(link)
-  }
   return (
     <footer className='w-screen bg-transparent h-20 justify-center items-center flex fixed bottom-0 z-40'>
       <ul className='flex relative gap-[25px]'>
@@ -45,9 +42,9 @@ const Footer = () => {
               Github
             </a>
         </li>
-        <li className='btn-social mail' onClick={() => contact("mailto:luisflr1997@gmail.com")}>
-            <span className='icon-container'><MailIcon wrapperClassName='icon'/></span>
-            <span className='icon-description'>Mail</span>
+        <li className='btn-social mail'>
+            <a href='mailto:luisflr1997@gmail.com' className='icon-container'><MailIcon wrapperClassName='icon'/></a>
+            <a href='mailto:luisflr1997@gmail.com' className='icon-description'>Mail</a>
         </li>
       </ul>
     </footer>

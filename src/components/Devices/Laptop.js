@@ -30,7 +30,7 @@ function Laptop({ laptopImage, reverse, techStack }) {
           <li key={idx}>
             <div className='group flex relative'>
               {icons[tech]?.icon}
-              <span class='
+              <span className='
                 group-hover:opacity-100 transition-opacity px-1 text-sm text-default-text rounded-md absolute left-1/2 
                 translate-x-1 -translate-y-5 opacity-0 m-4 shrink-0 w-[90px]'
               >

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 import vozy from '../../assets/images/vozy-logo.png';
 import code from '../../assets/images/code.png';
@@ -10,21 +11,36 @@ export default function Experience() {
   const [activeWork, setActiveWork] = useState('1');
 
   return (
-    <section className='xl:flex w-full relative h-[700px] sm:h-[900px] lg:h-screen flex-col items-center justify-center'>
+    <section className='xl:flex w-full h-[700px] pt-32 lg:pt-0 sm:h-[700px] lg:h-screen flex-col items-center justify-center' id='experience' >
       <div className='w-full px-5 sm:px-20 lg:px-0 flex text-center justify-center items-center sm:-mb-12 md:-mb-12 xl:mb-12 2xl:mb-12'>
-        <div className='flex flex-col w-full lg:w-[750px]'>
-          <p className={`text-3xl items-center flex text-[#A3B3BC] font-bold font-sans mb-4 pr-2 
-            after:content-[""] after:block after:relative after:grow after:h-[1px]
-            after:ml-[20px] after:bg-[#A3B3BC]`}>
+        <div className='flex flex-col w-full lg:w-[750px] items-center'>
+          <motion.p
+            className='text-3xl flex overflow-hidden text-default-text font-bold font-sans mb-8 pr-2 whitespace-nowrap'
+            initial={{ width: '0' }}
+            whileInView={{ 
+              width: 'fit-content',
+              transition: {
+                delay: 0.1,
+                duration: 0.8
+              }
+            }}
+            viewport={{ once: true }}
+          >
           · Experience
-          </p>
-          <div className='w-full overflow-x-auto overflow-hidden'>
+          </motion.p>
+          <motion.div 
+            className='w-full overflow-x-auto overflow-hidden'
+            initial= {{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            viewport={{ once: true }}
+          >
             <ol className="items-center w-[750px] justify-between flex space-x-8 space-y-0 mt-3 mb-5">
-            {works.map((work, idx) => {
-              return (
+              {works.map((work, i) => {
+                return (
                   <li
-                    key={`works-${idx}`}
-                    className="flex items-center space-x-3 cursor-pointer"
+                    key={`works-${i}`}
+                    className="flex items-center space-x-3 cursor-pointer transition active:scale-90"
                     onClick={() => setActiveWork(work.id)}
                   >
                     <span
@@ -54,7 +70,7 @@ export default function Experience() {
                         </g>
                       </svg>
                     </span>
-                    <span>
+                    <span >
                         <h3
                           className={`${activeWork === work.id ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue to-cyan' : 'text-[#A3B3BC]'} transition transform w-fit font-medium leading-tight`}
                         >
@@ -68,9 +84,15 @@ export default function Experience() {
                     </span>
                   </li>
               )})}
-              </ol>
-            </div>
-          <div className='flex flex-col pl-0 pt-3 mt-5 h-[320px] overflow-y-auto border-l border-[#A3B3BC]'>
+            </ol>
+          </motion.div>
+          <motion.div
+            className='flex flex-col pl-0 pt-3 mt-5 h-[320px] overflow-y-auto border-l border-[#A3B3BC]'
+            initial= {{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            viewport={{ once: true }}
+          >
             {'1' === activeWork &&
               <div className='animate-[appear_0.5s_ease-in] opacity-1 max-w-[750px] pl-6 pr-2'>
                 <div className='flex mb-3 items-center'>
@@ -79,12 +101,12 @@ export default function Experience() {
                   </a>
                   <p className='text-[#A3B3BC] text-xl'>VOZY</p>
                 </div>
-                <p className='text-[#A3B3BC] text-left mb-2 font-open-sans font-bold tracking-wide leading-relaxed'>
+                <p className='text-[#A3B3BC] text-left mb-2 font-sans tracking-wide leading-relaxed'>
                   I worked as a software developer focused only on the front-end side, consuming REST services for the implementation of new modules.
                   <br/>
                   In addition, the SCRUM methodology was applied, so I belonged to a work team and my day-to-day tools were the following:
                 </p>
-                <ul className='text-sm font-open-sans font-bold tracking-wide'>
+                <ul className='text-sm font-sans tracking-wide'>
                     <li key={`active-work${1}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
                       <p className='pl-4 relative text-[#A3B3BC]' >
                         ReactJs
@@ -116,7 +138,7 @@ export default function Experience() {
                   </a>
                   <p className='text-[#A3B3BC] text-xl'>Kipu Software</p>
                 </div>
-                <p className='text-[#A3B3BC] text-sm text-left mb-2 font-open-sans font-bold tracking-wide leading-relaxed'>
+                <p className='text-[#A3B3BC] text-sm text-left mb-2 font-sans tracking-wide leading-relaxed'>
                   I worked as a Frontend developer with the React library, building
                   friendly and responsive web systems. Also, I started to develop API
                   with the Django framework, applying all the security criteria and
@@ -163,7 +185,7 @@ export default function Experience() {
                   </a>
                   <p className='text-[#A3B3BC] text-xl'>Co-de</p>
                 </div>
-                <p className='text-[#A3B3BC] text-sm text-left mb-2 font-open-sans font-bold tracking-wide leading-relaxed'>
+                <p className='text-[#A3B3BC] text-sm text-left mb-2 font-sans tracking-wide leading-relaxed'>
                   During this period I worked as a FullStack developer, applying my
                   knowledge in the development of web and mobile applications, as well as
                   <br/>
@@ -193,7 +215,7 @@ export default function Experience() {
                   </ul>
               </div>
             }
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

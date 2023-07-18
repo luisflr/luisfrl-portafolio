@@ -40,7 +40,7 @@ module.exports = {
         'josefin': ['"Josefin Sans"', 'sans-serif'],
         'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
         'prompt': ['Prompt', 'sans-serif'],
-        'sans': ['Calibre', 'Inter', '"San Francisco"', '"SF Pro Text"', '-apple-system', 'system-ui', 'sans-serif'],
+        'sans': ['"SF Pro Text"','Calibre', 'Inter', '"San Francisco"', '-apple-system', 'system-ui', 'sans-serif'],
         'serif': ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
         'open-sans': ['"Open Sans"', 'sans-serif']
       },

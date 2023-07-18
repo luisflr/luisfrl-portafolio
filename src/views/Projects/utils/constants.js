@@ -10,8 +10,8 @@ export const PROJECTS = [
       github: 'https://github.com/luisflr/todo-angular',
       web: 'https://todo-angular-43e05.web.app/'
     },
-    description: `An e-commerce where products of the incalpaca company are exposed: sweaters, 
-      cloaks, bags, among others. Where you can also filter and buy the products that you like the most `,
+    description: `An app where you can create, update or delete your tasks or task lists. The design of 
+      this application was inspired by the Trello platform, so it also handles features such as drag-drop.`,
     techStack: ['angular', 'firebase', 'github', 'angular_CDK'],
     image: ToDo,
     typeProject: 'Personal web project'

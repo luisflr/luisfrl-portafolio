@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 import Laptop from '../../../components/Devices/Laptop';
 import Mobile from '../../../components/Devices/Mobile';
@@ -9,19 +10,33 @@ function Timeline({ projects }) {
   return (
     <div className='w-full flex flex-col items-center bg-gradient-to-r from-sky to-cyan py-[1px] mb-40'>
       <div className='w-full py-40 bg-background'>
-
         <div className='relative'>
 
           {/* {Vertical middle line} */}
-          <div className='absolute w-px h-full bg-default-text transform -translate-x-1/2 block left-1/2'></div>
+          <motion.div 
+            className='absolute w-px bg-default-text transform -translate-x-1/2 block left-1/2'
+            initial={{ height: '0' }}
+            whileInView={{ 
+              height: '100%',
+              transition: {
+                delay: 0.6,
+                duration: 3
+              }
+            }}  
+          />
           <div className='space-y-60'>
-            
             {projects.map((project, idx) => (
               <div key={idx}>
                 <div className='flex flex-col items-center'>
                   <div className='flex items-center justify-between w-full mx-auto'>
                     {/* {Left section } */}
-                    <div className={`${idx % 2 === 0 ? 'flex justify-center pl-8' : 'pr-8 rounded shadow-lg shadow-red-300'} w-1/2 `}>
+                    <motion.div
+                      className={`${idx % 2 === 0 ? 'flex justify-center pl-8' : 'pr-8 rounded shadow-lg shadow-red-300'} w-1/2 `}
+                      initial= {{ y: 50, x: -50, opacity: 0 }}
+                      whileInView={{ y: 0, x: 0,opacity: 1 }}
+                      transition={{ duration: 0.8, delay: 0.3 }}
+                      viewport={{ once: true }}
+                    >
                       {idx % 2 === 0
                       ? project?.type === 1
                         ? <Laptop 
@@ -41,14 +56,19 @@ function Timeline({ projects }) {
                           linksProject={project.links}
                           reverse={!(idx % 2 === 0)}
                           description={project.description}
-                          techStack={project.techStack}
                         />
                       }
 
                       
-                    </div>
+                    </motion.div>
                     {/* {Right section } */}
-                    <div className={`${idx % 2 !== 0 ? 'flex justify-center w-1/2 lg:pr-8' : 'w-1/2 p-4  rounded shadow-lg shadow-red-300'}`}>
+                    <motion.div
+                      className={`${idx % 2 !== 0 ? 'flex justify-center w-1/2 lg:pr-8' : 'w-1/2 p-4  rounded shadow-lg shadow-red-300'}`}
+                      initial= {{ x: 50, opacity: 0 }}
+                      whileInView={{ x: 0,opacity: 1 }}
+                      transition={{ duration: 0.8, delay: 0.3 }}
+                      viewport={{ once: true }}
+                    >
                     {idx % 2 !== 0
                       ? project?.type === 1
                         ? <Laptop laptopImage={project.image}
@@ -66,10 +86,9 @@ function Timeline({ projects }) {
                           linksProject={project.links}
                           reverse={!(idx % 2 === 0)}
                           description={project.description}
-                          techStack={project.techStack}
                         />
                       }
-                    </div>
+                    </motion.div>
                   </div>
                   <div
                     className='absolute flex items-center justify-center w-12 h-12 transform -translate-x-1/2 -translate-y-4 

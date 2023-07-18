@@ -13,7 +13,7 @@ function AngularCDKIcon({ wrapperClassName }) {
             <rect width='179' height='195'/>
         </clipPath>
       </defs>
-      <g clip-path='url(#_clipPath_2GFXlhoLK0PQwPMcNgecx9cHDe99PPCk)'>
+      <g clipPath='url(#_clipPath_2GFXlhoLK0PQwPMcNgecx9cHDe99PPCk)'>
         <g>
           <path
             d=' M 89.075 0 L 89.075 0 L 89.075 0 L 0 32.372 L 13.451 152.148 L 89.075 194.939 L 89.075 194.939 L 89.075 194.939 L 164.799 152.148 L 178.549 32.372 L 89.075 0 L 89.075 0 Z '
