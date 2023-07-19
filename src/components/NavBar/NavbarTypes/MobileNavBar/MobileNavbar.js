@@ -40,7 +40,7 @@ function MobileNavbar({ buttons, setActivePage, activePage }) {
             <img src={Logo} className='h-6 ' alt='Luis FR Logo' />
         </motion.a>
         <motion.div
-          className='absolute top-0 right-0 bottom-0 h-screen w-[230px] bg-transparent'
+          className='absolute top-0 right-0 bottom-0 w-[230px] bg-transparent'
           initial={false}
           animate={isOpen ? 'open' : 'closed'}
           custom={height}

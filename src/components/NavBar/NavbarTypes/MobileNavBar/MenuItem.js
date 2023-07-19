@@ -20,7 +20,6 @@ export const MenuItem = ({ button, i, activePage, setActivePage, moveCurrentPage
         smooth={true}
         offset={-60}
         duration={500}
-        // activeClass='text-cyan'
         className={`
         ${activePage === button.id ? 'text-cyan' : 'text-default-text'} 
         cursor-pointer text-md transition
