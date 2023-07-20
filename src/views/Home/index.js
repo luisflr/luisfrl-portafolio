@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import PerfilCartoon from '../../assets/images/Perfil-cartoon.png';
+import PerfilCartoon from '../../assets/images/perfil-cartoon.webp';
 
 function Home() {
   const textClasses = 'text-transparent w-fit bg-clip-text bg-gradient-to-r from-sky to-cyan text-5xl sm:text-7xl font-bold leading-none font-sans truncate';
@@ -67,10 +67,10 @@ function Home() {
               <a 
                 href='https://luisfr.netlify.app/'
                 target='_blank' rel='noreferrer'
-                className='float-left transition transform w-fit bg-gradient-to-r from-cyan to-sky h-fit rounded-lg p-[1px] hover:shadow-[0_0_15px_cyan] active:scale-90'>
+                className='float-left transition ease-linear w-fit bg-gradient-to-r from-cyan to-sky h-fit rounded-lg p-[1px] hover:shadow-[0_0_15px_cyan] active:scale-90'>
                   <p className='
                     bg-transparent rounded-lg font-sans font-semibold text-background px-4 py-2
-                    transition transform tracking-wide w-fit h-fit
+                    transition ease-linear tracking-wide w-fit h-fit
                     hover:bg-background hover:text-blue
                     '>
                     Earlier Version

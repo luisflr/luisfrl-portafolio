@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import vozy from '../../assets/images/vozy-logo.png';
-import code from '../../assets/images/code.png';
-import kipu from '../../assets/images/Kipu-logo.png';
+import vozy from '../../assets/images/vozy-logo.webp';
+import code from '../../assets/images/code.webp';
+import kipu from '../../assets/images/kipu-logo.webp';
 import { WORKS as works } from './utils/constants';
 
 export default function Experience() {

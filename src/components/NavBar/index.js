@@ -1,6 +1,6 @@
 import MobileNavbar from './NavbarTypes/MobileNavBar/MobileNavbar';
 import WindowNavbar from './NavbarTypes/WindowNavbar/WindowNavbar';
-import { BUTTONS } from './utils/constants';
+import { BUTTONS } from '../utils/constants';
 
 export const Navbar = ({ activePage, setActivePage }) => {
   

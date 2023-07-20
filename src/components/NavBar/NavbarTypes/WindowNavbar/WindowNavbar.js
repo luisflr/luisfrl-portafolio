@@ -21,7 +21,7 @@ function WindowNavbar({ buttons, setActivePage, activePage }) {
   return (
     <header className={`${show ? 'translate-y-0' : '-translate-y-[80px]'} transition ease-linear duration-200 fixed w-full z-20`}>
 
-      <nav className="bg-background px-10 py-2.5 hidden lg:block">
+      <nav className="bg-[#0000009c] backdrop-blur-sm px-10 py-2.5 hidden lg:block">
         <div className="flex flex-wrap justify-between items-center w-full">
           <motion.a 
             initial={{ opacity: 0 }}
@@ -34,22 +34,30 @@ function WindowNavbar({ buttons, setActivePage, activePage }) {
               <img src={Logo} className="ml-2 mr-1 h-6" alt="Luis FR Logo" />
           </motion.a>
           <div className="flex items-center lg:order-2">
-              <motion.a 
-                href="mailto:luisflr1997@gmail.com"
-                className="
-                  text-[#e1e0e0]  font-open-sans
-                  rounded-lg text-sm px-4 mr-2
-                  hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple hover:to-pink 
-                  hover:shadow-[0px_0px_8px_3px_rgba(126,91,239)] hover:font-bold
-                  lg:px-5 py-2 lg:py-2.5 lg:block"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }} 
-                transition={{
-                  duration: 1,
-                }}
-              >
-                Contact me
-              </motion.a>
+            <motion.a 
+              href="mailto:luisflr1997@gmail.com"
+              className="
+                text-[#e1e0e0] font-open-sans
+                rounded-lg text-sm px-4 mr-2
+                hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple hover:to-pink 
+                hover:font-bold
+                lg:px-5 py-2 lg:py-2.5 lg:block"
+              initial={{ opacity: 0 }}
+              animate={{ 
+                opacity: 1,
+                transition: {
+                  duration: 1
+                }
+              }} 
+              whileHover={{
+                boxShadow: '0px 0px 8px 3px rgba(126,91,239)',
+                transition: {
+                  duration: 0.1
+                }
+              }}
+            >
+              Contact me
+            </motion.a>
           </div>
           
           <div className="xl:flex justify-between items-center w-full lg:flex lg:w-auto lg:order-1">

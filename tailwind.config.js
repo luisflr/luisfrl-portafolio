@@ -46,7 +46,8 @@ module.exports = {
       },
       extend: {
         animation: {
-          appear: 'appear 0.5s ease-in'
+          appear: 'appear 0.5s ease-in',
+          showAfter: 'showAfter 0.5s'
         },
         backgroundImage: {
           'gradient-radial': 'radial-gradient(circle, rgba(2,104,105,1) 0%, rgba(5,11,15,1) 70%)',
@@ -59,6 +60,14 @@ module.exports = {
         keyframes: {
           appear: {
             '0%': { opacity: '0'},
+          },
+          showAfter: {
+            'from': {
+              width: '0%',
+            },
+            'to': {
+              width: '100%',
+            }
           }
         }
       },

@@ -1,6 +1,6 @@
-import VozyDashboard from '../../../assets/images/vozy.png';
-import ToDo from '../../../assets/images/To-Do.png';
-import Incabeneficios from '../../../assets/images/incabeneficios.jpg';
+import VozyDashboard from '../../../assets/images/vozy.webp';
+import ToDo from '../../../assets/images/to-do.webp';
+import Incabeneficios from '../../../assets/images/incabeneficios.webp';
 
 export const PROJECTS = [
   {

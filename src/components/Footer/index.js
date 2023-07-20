@@ -8,8 +8,8 @@ import './footer.css'
 
 const Footer = () => {
   return (
-    <footer className='w-screen bg-transparent h-20 justify-center items-center flex fixed bottom-0 z-40'>
-      <ul className='flex relative gap-[25px]'>
+    <footer className='w-screen bg-transparent h-20 justify-center items-center flex fixed bottom-0 z-20'>
+      <ul className='w-fit bg-[#0000009c] rounded-full backdrop-blur-sm flex relative gap-[25px]'>
         <li className='btn-social linkedin'>
             <a
               href='https://www.linkedin.com/in/luis-flores-rodriguez/'

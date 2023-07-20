@@ -27,18 +27,23 @@ function MobileNavbar({ buttons, setActivePage, activePage }) {
             delay: 0.4
           }
         }}
-        className={` lg:hidden fixed w-full flex  z-30`}
+        className='lg:hidden fixed w-full flex  z-30'
       >
         <motion.a 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }} 
-          transition={{
-            duration: 1,
-          }}
-          href='/' 
-          className={`py-6 grow flex pl-12 h-20`}>
-            <img src={Logo} className='h-6 ' alt='Luis FR Logo' />
-        </motion.a>
+            initial={{ opacity: 0 }}
+            animate={{ 
+              opacity: 1,
+              transition: {
+                duration: 1
+              }
+            }} 
+            whileHover={{
+              scale: 1.1
+            }}
+            href='/' 
+            className='mt-[18px] ml-12 w-20 h-fit'>
+              <img src={Logo} className='h-6 ' alt='Luis FR Logo' />
+          </motion.a>
         <motion.div
           className='absolute top-0 right-0 bottom-0 w-[230px] bg-transparent'
           initial={false}
