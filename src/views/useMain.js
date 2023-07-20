@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const useApp = () => {
+const useMain = () => {
   const [activePage, setActivePage] = useState('');
   return {
     /* States */
@@ -11,4 +11,4 @@ const useApp = () => {
   }
 }
 
-export default useApp;
+export default useMain;
