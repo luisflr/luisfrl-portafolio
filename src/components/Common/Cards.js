@@ -1,19 +1,31 @@
-import React from 'react'
-import Links from './Links'
-import { ICONS_PROJECTS as icons } from '../Devices/utils/constants'
+import React from 'react';
+import { motion } from 'framer-motion';
+
+import Links from './Links';
+
+import { ICONS_PROJECTS as icons } from '../Devices/utils/constants';
 
 function Cards({ 
   image, typeProject, titleProject, linksProject, description,
   techStack,
  }) {
   return (
-    <div
+    <motion.div
       className='max-w-[400px] rounded-lg bg-transparent
-      transition transform
-      mb-20 border border-[#ffffff1a]
-      hover:shadow-[2px_10px_30px_0px_rgba(0,0,0,1)]
-      hover:scale-105
-      '
+        mb-20 border border-[#ffffff1a]'
+      initial= {{ y: 50, opacity: 0 }}
+      whileHover={{ 
+        shadow: '2px 10px 30px 0px rgba(0,0,0,1)',
+        scale: 1.1,
+        transition: {
+          duration: 0.2
+        }
+      }}
+      whileInView={{ 
+        y: 0, opacity: 1,
+        transition: { duration: 0.3, delay: 0.1 }
+      }}
+      viewport={{ once: true }}
     >
       <div
         className='relative h-[200px]'
@@ -62,7 +74,7 @@ function Cards({
           )}
         </ul>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
