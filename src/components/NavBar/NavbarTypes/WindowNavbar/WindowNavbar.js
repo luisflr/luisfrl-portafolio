@@ -38,9 +38,9 @@ function WindowNavbar({ buttons, setActivePage, activePage }) {
               href="mailto:luisflr1997@gmail.com"
               className="
                 text-[#e1e0e0] font-open-sans
-                rounded-lg text-sm px-4 mr-2
-                hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple hover:to-pink 
-                hover:font-bold
+                rounded-lg text-sm px-4 mr-2 font-bold
+                hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r 
+                hover:from-purple hover:to-pink
                 lg:px-5 py-2 lg:py-2.5 lg:block"
               initial={{ opacity: 0 }}
               animate={{ 

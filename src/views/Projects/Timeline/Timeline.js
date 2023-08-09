@@ -22,7 +22,8 @@ function Timeline({ projects }) {
                 delay: 0.6,
                 duration: 3
               }
-            }}  
+            }}
+            viewport={{ once: true }} 
           />
           <div className='space-y-60'>
             {projects.map((project, idx) => (

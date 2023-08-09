@@ -14,7 +14,7 @@ function PagesTimeline({ activePage }) {
       <div className='bg-gradient-to-t from-sky to-cyan pl-[1px] pt-[1px] pb-[1px]'>
         <ol className='relative bg-background p-6'>
           {buttons.map((button, i) => 
-            <li className='mb-14 '>
+            <li key={i} className='mb-14 '>
               <LinkScroll
                 to={button.id}
                 spy={true}
