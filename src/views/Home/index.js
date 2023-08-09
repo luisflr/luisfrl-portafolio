@@ -65,7 +65,7 @@ function Home() {
                 Hello everyone! I'm software developer and have experience creating, developing, and maintaining high-quality web applications.
               </p>
               <a 
-                href='https://luisfr.netlify.app/'
+                href='https://github.com/luisflr/luisfrl-portafolio'
                 target='_blank' rel='noreferrer'
                 className='float-left transition ease-linear w-fit bg-gradient-to-r from-cyan to-sky h-fit rounded-lg p-[1px] hover:shadow-[0_0_15px_cyan] active:scale-90'>
                   <p className='
