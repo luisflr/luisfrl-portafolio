@@ -28,14 +28,14 @@ const Footer = () => {
         </li>
         <li className='btn-social github'>
             <a
-              href='https://github.com/luisflr?tab=repositories'
+              href='https://github.com/luisflr'
               target='_blank'
               className='icon-container' rel="noreferrer"
             >
               <GithubIcon wrapperClassName='icon' />
             </a>
             <a
-              href='https://github.com/luisflr?tab=repositories'
+              href='https://github.com/luisflr'
               target='_blank' rel="noreferrer"
               className='icon-description'
             >

@@ -10,11 +10,11 @@ function PagesTimeline({ activePage }) {
   const styleIcon = 'flex items-center transition transform justify-center w-9 h-9 bg-background ring-background rounded-full border ring-8';
 
   return (
-    <div className='fixed h-screen items-center right-0 z-10 hidden xl:flex'> 
-      <div className='bg-gradient-to-t from-sky to-cyan pl-[1px] pt-[1px] pb-[1px]'>
-        <ol className='relative bg-background p-6'>
+    <div className='fixed h-screen items-center right-3 z-10 hidden xl:flex rounded-full'> 
+      <div className='bg-gradient-to-t from-sky to-cyan p-[1px] rounded-full'>
+        <ol className='relative bg-background p-4 rounded-full space-y-8'>
           {buttons.map((button, i) => 
-            <li key={i} className='mb-14 '>
+            <li key={i}>
               <LinkScroll
                 to={button.id}
                 spy={true}

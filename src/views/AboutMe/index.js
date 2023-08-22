@@ -21,7 +21,6 @@ function AboutMe() {
                 h-[200px] w-[200px] duration-300
                 rounded-full
                 hover:drop-shadow-[0_0_5px_cyan]
-                hover:cursor-pointer
                 lg:w-[240px] lg:h-[240px]
                 xl:w-[300px] xl:h-[260px]
                 2xl:h-[300px]
