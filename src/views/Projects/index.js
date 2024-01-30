@@ -25,7 +25,7 @@ export default function Projects() {
         }}
         viewport={{ once: true }}  
         >
-          · Projects
+          · Work Projects
         </motion.p>
         
         <div className='hidden lg:block'>
