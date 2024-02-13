@@ -27,6 +27,7 @@ function Timeline({ projects }) {
           />
           <div className='space-y-60'>
             {projects.map((project, idx) => (
+              project.type_project === 'Work' &&
               <div key={idx}>
                 <div className='flex flex-col items-center'>
                   <div className='flex items-center justify-between w-full mx-auto'>
@@ -39,20 +40,20 @@ function Timeline({ projects }) {
                       viewport={{ once: true }}
                     >
                       {idx % 2 === 0
-                      ? project?.type === 1
+                      ? project?.type_platform === 'web'
                         ? <Laptop 
                             laptopImage={project.image}
                             reverse={idx % 2 === 0}
-                            techStack={project.techStack}
+                            techStack={project.tech_stack}
                           />
                         : <Mobile
                             mobileImage={project.image}
                             reverse={idx % 2 === 0}
                             id={idx}
-                            techStack={project.techStack}
+                            techStack={project.tech_stack}
                           />
                       : <DescriptionTimeline
-                          typeProject={project.typeProject}
+                          typeProject={project.type_project}
                           titleProject={project.title}
                           linksProject={project.links}
                           reverse={!(idx % 2 === 0)}
@@ -71,18 +72,18 @@ function Timeline({ projects }) {
                       viewport={{ once: true }}
                     >
                     {idx % 2 !== 0
-                      ? project?.type === 1
+                      ? project?.type_platform === 'web'
                         ? <Laptop laptopImage={project.image}
                             reverse={idx % 2 === 0}
-                            techStack={project.techStack}/>
+                            techStack={project.tech_stack}/>
                         : <Mobile
                             mobileImage={project.image}
                             id={idx}
                             reverse={idx % 2 === 0}
-                            techStack={project.techStack}
+                            techStack={project.tech_stack}
                           />
                       : <DescriptionTimeline
-                          typeProject={project.typeProject}
+                          typeProject={project.type_project}
                           titleProject={project.title}
                           linksProject={project.links}
                           reverse={!(idx % 2 === 0)}
