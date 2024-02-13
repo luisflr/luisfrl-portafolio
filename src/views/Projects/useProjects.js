@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getProjects } from '../../services/projects'
+import { GET_PROJECTS_URL } from './utils/constants';
 
 const useProjects = () => {
   const [workProjects, setWorkProjects] = useState(null);
@@ -8,7 +9,7 @@ const useProjects = () => {
   const [personalProjects, setPersonalProjects] = useState(null)
 
   const loadProjects = async () => {
-    await getProjects('http://localhost:8080/api/v1/projects').then(res => {
+    await getProjects(GET_PROJECTS_URL).then(res => {
       setWorkProjects(res.data.filter(data => data.type_project === 'Work'))
     });
   }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import Laptop from '../../../components/Devices/Laptop';
-import Mobile from '../../../components/Devices/Mobile';
+import Laptop from '../Devices/Laptop';
+import Mobile from '../Devices/Mobile';
 import DescriptionTimeline from './DescriptionTimeline';
 
 function Timeline({ projects }) {

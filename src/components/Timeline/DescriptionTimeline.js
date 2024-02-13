@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Links from '../../../components/Common/Links';
+import Links from '../Common/Links';
 
 function DescriptionTimeline({
   typeProject, titleProject, linksProject, reverse, description
