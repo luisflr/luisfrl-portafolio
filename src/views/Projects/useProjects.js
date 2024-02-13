@@ -4,13 +4,12 @@ import { GET_PROJECTS_URL } from './utils/constants';
 
 const useProjects = () => {
   const [workProjects, setWorkProjects] = useState(null);
-
-  // TODO: usar para proyectos personales
   const [personalProjects, setPersonalProjects] = useState(null)
 
   const loadProjects = async () => {
     await getProjects(GET_PROJECTS_URL).then(res => {
       setWorkProjects(res.data.filter(data => data.type_project === 'Work'))
+      setPersonalProjects(res.data.filter(data => data.type_project === 'personal'))
     });
   }
 
@@ -20,6 +19,7 @@ const useProjects = () => {
 
   return {
     /* States */
+    personalProjects,
     workProjects
 
     /* State functions */
