@@ -3,7 +3,7 @@ import { ICONS_PROJECTS as icons } from './utils/constants';
 
 function Laptop({ laptopImage, reverse, techStack }) {
   return (
-    <div className='flex w-full'>
+    <div className='flex w-full items-center'>
       <div className={`${reverse ? 'order-2' : 'order-1'} h-fit transition hover:drop-shadow-[0_0_5px_cyan] w-5/6`}> 
         <div className='
           relative mx-auto p-3 border-[#333] bg-background border-[1px]

@@ -18,7 +18,7 @@ function PersonalProjects({ personalProjects}) {
         >
           · Personal Projects
         </motion.p>
-        <div className='w-full flex flex-col lg:flex-row justify-center lg:space-x-14'>
+        <div className='w-full flex flex-col lg:flex-row justify-center items-center lg:space-x-14'>
           {personalProjects?.map((project, index) => 
             <Cards
               key={`project-id-${index}`}

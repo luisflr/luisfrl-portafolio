@@ -43,7 +43,7 @@ function Cards({
           alt='work' />
       </div>
       <div className='pl-6 mt-6'>
-        <p className='text-default-text'>{typeProject}</p>
+        <p className='text-default-text capitalize'>{typeProject}</p>
         <div className='flex items-center mt-2'>
           <h5
             className='
