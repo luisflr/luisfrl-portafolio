@@ -1,14 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
-import vozy from '../../assets/images/vozy-logo.webp';
-import code from '../../assets/images/code.webp';
-import kipu from '../../assets/images/kipu-logo.webp';
 import { WORKS as works } from './utils/constants';
+import useExperience from "./hooks/useExperience";
 
 export default function Experience() {
-  
-  const [activeWork, setActiveWork] = useState('1');
+  const { activeWork, setActiveWork, findWork } = useExperience({ works });
 
   return (
     <section className='xl:flex w-full h-[700px] pt-32 lg:pt-0 sm:h-[700px] lg:h-screen flex-col items-center justify-center' id='experience' >
@@ -93,128 +90,32 @@ export default function Experience() {
             transition={{ duration: 0.5, delay: 1 }}
             viewport={{ once: true }}
           >
-            {'1' === activeWork &&
-              <div className='animate-[appear_0.5s_ease-in] opacity-1 max-w-[750px] pl-6 pr-2'>
-                <div className='flex mb-3 items-center'>
-                  <a href='https://www.vozy.co/' target='_blank' rel='noreferrer' className='cursor-pointer'>
-                    <img src={vozy} alt='vozy' className='h-8 mr-2'/>
-                  </a>
-                  <p className='text-[#A3B3BC] text-xl'>VOZY</p>
-                </div>
-                <p className='text-[#A3B3BC] text-left mb-2 font-sans tracking-wide leading-relaxed'>
-                  I worked as a software developer focused only on the front-end side, consuming REST services for the implementation of new modules.
-                  <br/>
-                  In addition, the SCRUM methodology was applied, so I belonged to a work team and my day-to-day tools were the following:
-                </p>
-                <ul className='text-sm font-sans tracking-wide'>
-                    <li key={`active-work${1}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        ReactJs
-                      </p>
-                    </li>
-                    <li key={`active-work${2}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        Auth0
-                      </p>
-                    </li>
-                    <li key={`active-work${3}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        ReactFlow
-                      </p>
-                    </li>
-                    <li key={`active-work${4}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        Git
-                      </p>
-                    </li>
-                  </ul>
-              </div>
-            }
-            {'2' === activeWork && 
-              <div className='animate-[appear_0.5s_ease-in] opacity-1 max-w-[750px] pl-6 pr-2'>
+            {works &&
+              <div key={`work-active-${findWork.id}`} className='animate-[appear_0.5s_ease-in] opacity-1 max-w-[750px] pl-6 pr-2'>
                 <div className='flex mb-3 items-center'>
                   <a href='https://kipu-software.pe/' target='_blank' rel='noreferrer' className='cursor-pointer'>
-                    <img src={kipu} alt='kipu software' className='h-8 w-28 mr-2'/>
+                    <img src={findWork?.image} alt={`${findWork?.image} logo`} className='h-8 w-28 mr-2'/>
                   </a>
-                  <p className='text-[#A3B3BC] text-xl'>Kipu Software</p>
+                  <p className='text-[#A3B3BC] text-xl'>{findWork.name}</p>
                 </div>
-                <p className='text-[#A3B3BC] text-sm text-left mb-2 font-sans tracking-wide leading-relaxed'>
-                  I worked as a Frontend developer with the React library, building
-                  friendly and responsive web systems. Also, I started to develop API
-                  with the Django framework, applying all the security criteria and
-                  efficiency.
-                  <br/>
-                  I finished my period working on a project for a German company
-                  dedicated to investments, which helped me to familiarize myself with the projects
-                  large scale
-                </p>
+                {findWork.description?.map((description, index) => (
+                  <div key={`work-description-${index}`}>
+                    <p className='text-[#A3B3BC] text-sm text-left mb-2 font-sans tracking-wide leading-relaxed'>
+                      {description}
+                    </p> 
+                  </div>
+                ))}
                 <ul>
-                    <li key={`active-work${5}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        ReactTs
-                      </p>
+                  {findWork.stack?.map((tech_stack, index) => (
+                    <li key={`work-stack-${index}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
+                      <p className='pl-4 relative text-[#A3B3BC]'>{tech_stack}</p>
                     </li>
-                    <li key={`active-work${6}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        Angular
-                      </p>
-                    </li>
-                    <li key={`active-work${7}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        Ionic
-                      </p>
-                    </li>
-                    <li key={`active-work${8}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        Django
-                      </p>
-                    </li>
-                    <li key={`active-work${9}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        Bitbucket - Git
-                      </p>
-                    </li>
+                  ))}
                   </ul>
               </div>
+
             }
-            {'3' === activeWork &&
-              <div className='animate-[appear_0.5s_ease-in] max-w-[750px] pl-6 pr-2'>
-                <div className='flex mb-3 items-center'>
-                  <a href='https://co-de.com.pe/' target='_blank' rel='noreferrer' className='cursor-pointer'>
-                    <img src={code} alt='code' className='h-8 mr-2'/>
-                  </a>
-                  <p className='text-[#A3B3BC] text-xl'>Co-de</p>
-                </div>
-                <p className='text-[#A3B3BC] text-sm text-left mb-2 font-sans tracking-wide leading-relaxed'>
-                  During this period I worked as a FullStack developer, applying my
-                  knowledge in the development of web and mobile applications, as well as
-                  <br/>
-                  I also started to implement some APIs with the Lumen micro-framework.
-                </p>
-                <ul>
-                    <li key={`active-work${10}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        Angular
-                      </p>
-                    </li>
-                    <li key={`active-work${11}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        Flutter
-                      </p>
-                    </li>
-                    <li key={`active-work${12}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        Lumen
-                      </p>
-                    </li>
-                    <li key={`active-work${13}`} className='flex items-center before:content-["▹"] before:text-blue before:-ml-1'>
-                      <p className='pl-4 relative text-[#A3B3BC]' >
-                        Gitlab - Git
-                      </p>
-                    </li>
-                  </ul>
-              </div>
-            }
+            
           </motion.div>
         </div>
       </div>

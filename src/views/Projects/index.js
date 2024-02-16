@@ -1,5 +1,5 @@
 import PersonalProjects from './PersonalProjects';
-import useProjects from './useProjects';
+import useProjects from './hooks/useProjects';
 import WorkProjects from './WorkProjects';
 
 

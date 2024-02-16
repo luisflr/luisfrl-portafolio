@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getProjects } from '../../services/projects'
+import { getProjects } from '../../../services/projects'
 
 const useProjects = () => {
   const [workProjects, setWorkProjects] = useState(null);
