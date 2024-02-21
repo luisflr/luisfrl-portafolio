@@ -60,7 +60,7 @@ function Home() {
                 }
               }}
             >
-              <p className='text-[#A3B3BC] text-lg mb-3 font-sans'>I'm a web developer</p>
+              <p className='text-[#A3B3BC] text-lg mb-3 font-sans'>I'm web developer</p>
               <p className='text-[#A3B3BC] font-sans tracking-wide mb-6'>
                 Hello everyone! I'm software developer and have experience creating, developing, and maintaining high-quality web applications.
               </p>
