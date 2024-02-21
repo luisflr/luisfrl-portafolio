@@ -100,7 +100,7 @@ export default function Experience() {
                 </div>
                 {findWork.description?.map((description, index) => (
                   <div key={`work-description-${index}`}>
-                    <p className='text-[#A3B3BC] text-sm text-left mb-2 font-sans tracking-wide leading-relaxed'>
+                    <p className='text-[#A3B3BC] text-left mb-2 font-sans tracking-wide leading-relaxed'>
                       {description}
                     </p> 
                   </div>

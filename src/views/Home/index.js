@@ -11,7 +11,7 @@ function Home() {
           <div className='flex flex-col w-full ml-2'>
             <motion.p
               className='
-                text-[#a3b3bcc5] overflow-hidden text-md mb-2 ml-1 font-sans 
+                text-[#A3B3BC] overflow-hidden text-md mb-2 ml-1 font-sans 
                 tracking-wide whitespace-nowrap'
                 initial={{ width: '0' }}
                 animate={{ 
@@ -60,8 +60,8 @@ function Home() {
                 }
               }}
             >
-              <p className='text-[#a3b3bcc5] text-lg mb-3 font-sans'>I'm a web developer</p>
-              <p className='text-[#a3b3bcc5] font-sans tracking-wide mb-6'>
+              <p className='text-[#A3B3BC] text-lg mb-3 font-sans'>I'm a web developer</p>
+              <p className='text-[#A3B3BC] font-sans tracking-wide mb-6'>
                 Hello everyone! I'm software developer and have experience creating, developing, and maintaining high-quality web applications.
               </p>
               <a 

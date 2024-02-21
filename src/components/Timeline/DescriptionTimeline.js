@@ -20,7 +20,7 @@ function DescriptionTimeline({
         </p>
     </div>
     <div className={`${reverse ? 'pl-[1px] mr-3' : 'pr-[1px] ml-3' } bg-gradient-to-r from-sky to-cyan w-fit pt-[1px] pb-[1px] mb-4`}>
-        <p className='h-full bg-background p-3 text-[#A3B3BC] text-sm font-sans tracking-wide leading-6'>
+        <p className='h-full bg-background p-3 text-[#A3B3BC] text-[0.95rem] font-sans tracking-wide leading-6'>
         {description}
         </p>
     </div>
