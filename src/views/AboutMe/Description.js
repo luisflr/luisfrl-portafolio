@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from "framer-motion";
 
+import { PlatziCourses, UdemyCourses } from './utils/constants'
+
 function Description() {
   return (
     <div className='bg-background pl-4 pt-3 transition transform duration-300 flex'>
@@ -55,61 +57,40 @@ function Description() {
           <div className='text-default-text mr-5 font-sans'>
             <p className='text-xl tracking-wide'>Platzi</p>
             <ul>
-              <li className='flex items-center before:content-["▹"]  before:text-blue before:-ml-1 before:-mr-2'>
-                <a
-                  href='https://platzi.com/p/lflores8455/curso/2597-react-estado/diploma/detalle/'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='transition transform hover:text-[#97C93E] pl-4 '
-                >
-                  Curso Manejo profesional del estado / React
-                </a>
-              </li>
-              <li className='flex items-center before:content-["▹"]  before:text-blue before:-ml-1 before:-mr-2'>
-                <a
-                  href='https://platzi.com/p/lflores8455/curso/6241-react-ssr/diploma/detalle/'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='transition transform hover:text-[#97C93E] pl-4'
-                >
-                  Curso server side render SSR / React
-                </a>
-              </li>
-              <li className='flex items-center before:content-["▹"]  before:text-blue before:-ml-1 before:-mr-2'>
-                <a
-                  href='https://platzi.com/p/lflores8455/curso/2478-angular/diploma/detalle/'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='transition transform hover:text-[#97C93E] pl-4'
-                >
-                    Curso de Fundamentos de Angular
-                </a>
-              </li>
-              <li className='flex items-center before:content-["▹"]  before:text-blue before:-ml-1 before:-mr-2'>
-                <a
-                  href='https://platzi.com/p/lflores8455/curso/4459-angular-tailwind/diploma/detalle/'
-                  target='_blank'
-                  rel='noreferrer'
-                  className='transition transform hover:text-[#97C93E] pl-4'
-                >
-                  Curso de Maquetación con Angular CDK y Tailwind
-                </a>
-              </li>
+              {PlatziCourses.map((course, index) => 
+                <li
+                  key={`platzi-course${index}`}
+                  className='flex items-center before:content-["▹"]  before:text-blue before:-ml-1 before:-mr-2'>
+                  <a
+                    href={course.link}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='transition transform hover:text-[#97C93E] pl-4 '
+                  >
+                    {course.title}
+                  </a>
+                </li>
+                )}
+              
             </ul>
           </div>
           <div className='text-default-text font-sans'>
             <p className='text-xl tracking-wide'>Udemy</p>
             <ul>
-              <li className='flex items-center before:content-["▹"]  before:text-blue before:-ml-1 before:-mr-2'>
-              <a 
-                href='https://www.linkedin.com/in/luis-flores-rodriguez/overlay/1635528741751/single-media-viewer/?profileId=ACoAADcq26IBBXfjsMQumIEg3ctLuLbuP9XpUoE'
-                target='_blank'
-                rel='noreferrer'
-                className='pl-4 hover:text-[#A435F0]'
-              >
-                Curso Seguridad Informática
-              </a>
-              </li>
+              {UdemyCourses.map((course, index) => 
+                <li
+                  key={`udemy-course${index}`}
+                  className='flex items-center before:content-["▹"]  before:text-blue before:-ml-1 before:-mr-2'>
+                  <a 
+                    href={course.link}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='pl-4 hover:text-[#A435F0]'
+                  >
+                    {course.title}
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
         </div>

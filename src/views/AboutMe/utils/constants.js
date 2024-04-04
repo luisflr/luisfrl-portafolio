@@ -14,6 +14,35 @@ export const skills = [
   <GitIcon wrapperClassName='fill-default-text h-[22px] w-[22px]'/>
 ]
 
+export const PlatziCourses = [
+  {
+    link: 'https://platzi.com/p/lflores8455/curso/2597-react-estado/diploma/detalle/',
+    title: 'Curso Manejo profesional del estado / React'
+  },
+  {
+    link: 'https://platzi.com/p/lflores8455/curso/6241-react-ssr/diploma/detalle/',
+    title: 'Curso server side render SSR / React'
+  },
+  {
+    link: 'https://platzi.com/p/lflores8455/curso/2478-angular/diploma/detalle/',
+    title: 'Curso de Fundamentos de Angular'
+  },
+  {
+    link: 'https://platzi.com/p/lflores8455/curso/4459-angular-tailwind/diploma/detalle/',
+    title: 'Curso de Maquetación con Angular CDK y Tailwind'
+  }
+]
+export const UdemyCourses = [
+  {
+    link: 'https://www.linkedin.com/in/luis-flores-rodriguez/overlay/1635528741751/single-media-viewer/?profileId=ACoAADcq26IBBXfjsMQumIEg3ctLuLbuP9XpUoE',
+    title: 'Curso Seguridad Informática'
+  },
+  {
+    link: 'https://www.udemy.com/certificate/UC-1a124250-242e-4808-95df-8f25eff95898/',
+    title: 'Clean Code y Principios Solid'
+  },
+]
+
 /* Animations */
 export const buttonSkillsVariants = {
   visible: i => ({
