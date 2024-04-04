@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { getProjects } from '../../../services/projects'
+import { get } from '../../../services/API'
 
 const useProjects = () => {
   const [workProjects, setWorkProjects] = useState(null);
   const [personalProjects, setPersonalProjects] = useState(null)
 
   const loadProjects = async () => {
-    await getProjects(process.env.REACT_APP_GET_PROJECTS_URI).then(res => {
+    await get('/projects').then(res => {
       setWorkProjects(res?.data.filter(data => data.type_project === 'Work'))
       setPersonalProjects(res?.data.filter(data => data.type_project === 'personal'))
     });

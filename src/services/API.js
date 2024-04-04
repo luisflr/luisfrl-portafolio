@@ -1,9 +1,9 @@
-import { HEADERS } from "./constants";
+import { HEADERS, URI } from "./constants";
 
-export async function getProjects(url) {
+export async function get(url) {
   let response;
   try {
-    response = await fetch(url, {
+    response = await fetch(`${URI}${url}`, {
       method: 'GET',
       headers: HEADERS,
     }).then( res => res.json())  

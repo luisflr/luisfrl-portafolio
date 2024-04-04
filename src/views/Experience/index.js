@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { WORKS as works } from './utils/constants';
+// import { WORKS as works } from './utils/constants';
 import useExperience from "./hooks/useExperience";
 
 export default function Experience() {
-  const { activeWork, setActiveWork, findWork } = useExperience({ works });
+  const { activeWork, setActiveWork, findWork, works } = useExperience();
 
   return (
     <section className='xl:flex w-full h-[700px] pt-32 lg:pt-0 sm:h-[700px] lg:h-screen flex-col items-center justify-center' id='experience' >
@@ -33,15 +33,16 @@ export default function Experience() {
             viewport={{ once: true }}
           >
             <ol className="items-center w-[750px] justify-between flex space-x-8 space-y-0 mt-3 mb-5">
-              {works.map((work, i) => {
+              {works
+                ? works.map((work, i) => {
                 return (
                   <li
                     key={`works-${i}`}
                     className="flex items-center space-x-3 cursor-pointer transition active:scale-90"
-                    onClick={() => setActiveWork(work.id)}
+                    onClick={() => setActiveWork(work.number_of_work)}
                   >
                     <span
-                      className={`border ${activeWork === work.id ? 'border-sky' : 'border-[#A3B3BC]' } transition transform flex items-center justify-center w-8 h-8 rounded-full shrink-0`}
+                      className={`border ${activeWork === work.number_of_work ? 'border-sky' : 'border-[#A3B3BC]' } transition transform flex items-center justify-center w-8 h-8 rounded-full shrink-0`}
                     >
                       <svg
                         className='w-[21px] h-[21px]'version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +50,7 @@ export default function Experience() {
                         preserveAspectRatio="xMidYMid meet">
 
                         <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
-                          fill={`${activeWork === work.id ? '#007CF0' : '#A3B3BC'}`} stroke="none">
+                          fill={`${activeWork === work.number_of_work ? '#007CF0' : '#A3B3BC'}`} stroke="none">
                           <path d="M183 440 c-10 -24 -24 -40 -45 -48 -32 -12 -34 -35 -2 -41 18 -3 34
                             -18 34 -33 0 -4 -24 -8 -52 -10 l-53 -3 0 -115 0 -115 68 -3 c65 -3 89 -18 47
                             -29 -47 -12 -14 -23 70 -23 84 0 117 11 70 23 -42 11 -18 26 48 29 l67 3 0
@@ -69,18 +70,20 @@ export default function Experience() {
                     </span>
                     <span >
                         <h3
-                          className={`${activeWork === work.id ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue to-cyan' : 'text-[#A3B3BC]'} transition transform w-fit font-medium leading-tight`}
+                          className={`${activeWork === work.number_of_work ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue to-cyan' : 'text-[#A3B3BC]'} transition transform w-fit font-medium leading-tight`}
                         >
                           {work.name}
                         </h3>
                         <p
-                          className={`${activeWork === work.id ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue to-cyan' : 'text-[#A3B3BC]'} transition transform w-fit font-medium leading-tight text-sm`}
+                          className={`${activeWork === work.number_of_work ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue to-cyan' : 'text-[#A3B3BC]'} transition transform w-fit font-medium leading-tight text-sm`}
                         >
                           {work.period}
                         </p>
                     </span>
                   </li>
-              )})}
+              )})
+              : <h1>Cargando...</h1>    
+            }
             </ol>
           </motion.div>
           <motion.div
@@ -91,9 +94,9 @@ export default function Experience() {
             viewport={{ once: true }}
           >
             {works &&
-              <div key={`work-active-${findWork.id}`} className='animate-[appear_0.5s_ease-in] opacity-1 max-w-[750px] pl-6 pr-2'>
+              <div key={`work-active-${findWork.number_of_work}`} className='animate-[appear_0.5s_ease-in] opacity-1 max-w-[750px] pl-6 pr-2'>
                 <div className='flex mb-3 items-center'>
-                  <a href='https://kipu-software.pe/' target='_blank' rel='noreferrer' className='cursor-pointer'>
+                  <a href={findWork.work_link} target='_blank' rel='noreferrer' className='cursor-pointer'>
                     <img src={findWork?.image} alt={`${findWork?.image} logo`} className='h-8 w-28 mr-2'/>
                   </a>
                   <p className='text-[#A3B3BC] text-xl'>{findWork.name}</p>
