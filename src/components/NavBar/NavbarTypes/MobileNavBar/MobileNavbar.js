@@ -6,7 +6,7 @@ import { MenuList } from './MenuList';
 import useMobileNavbar from './hooks/useMobileNavbar';
 
 import { sidebar } from './utils/constants';
-import { MenuToggle } from '../../../../assets/icons/MenuToggle';
+import { MenuToggle } from '../../../../assets/icons/CommonIcons/MenuToggle';
 import Logo from '../../../../assets/images/LuisFR.png';
 
 function MobileNavbar({ buttons, setActivePage, activePage }) {

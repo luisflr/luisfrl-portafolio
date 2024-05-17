@@ -1,9 +1,9 @@
 import DjangoIcon from '../../../assets/icons/FrameworkIcons/DjangoIcon';
-import GitIcon from '../../../assets/icons/GitIcon';
-import HtmlIcon from '../../../assets/icons/HtmlIcon';
-import JavascriptIcon from '../../../assets/icons/JavascriptIcon';
+import GitIcon from '../../../assets/icons/ToolIcons/GitIcon';
+import HtmlIcon from '../../../assets/icons/LanguageIcons/HtmlIcon';
+import JavascriptIcon from '../../../assets/icons/LanguageIcons/JavascriptIcon';
 import ReactIcon from '../../../assets/icons/FrameworkIcons/ReactIcon';
-import TypescriptIcon from '../../../assets/icons/TypescriptIcon';
+import TypescriptIcon from '../../../assets/icons/LanguageIcons/TypescriptIcon';
 
 export const skills = [
   <HtmlIcon wrapperClassName='fill-default-text h-[22px] w-[22px]'/>,
