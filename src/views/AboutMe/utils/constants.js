@@ -1,8 +1,8 @@
-import DjangoIcon from '../../../assets/icons/DjangoIcon';
+import DjangoIcon from '../../../assets/icons/FrameworkIcons/DjangoIcon';
 import GitIcon from '../../../assets/icons/GitIcon';
 import HtmlIcon from '../../../assets/icons/HtmlIcon';
 import JavascriptIcon from '../../../assets/icons/JavascriptIcon';
-import ReactIcon from '../../../assets/icons/ReactIcon';
+import ReactIcon from '../../../assets/icons/FrameworkIcons/ReactIcon';
 import TypescriptIcon from '../../../assets/icons/TypescriptIcon';
 
 export const skills = [

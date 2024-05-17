@@ -1,21 +1,30 @@
-import AngularCDKIcon from '../../../assets/icons/AngularCDKIcon';
-import AngularIcon from '../../../assets/icons/AngularIcon';
-import AstroIcon from '../../../assets/icons/AstroIcon';
+import AngularCDKIcon from '../../../assets/icons/FrameworkIcons/AngularCDKIcon';
+import AngularIcon from '../../../assets/icons/FrameworkIcons/AngularIcon';
+import AstroIcon from '../../../assets/icons/FrameworkIcons/AstroIcon';
 import Auth0Icon from '../../../assets/icons/Auth0Icon';
 import BitbucketIcon from '../../../assets/icons/BitbucketIcon';
-import BootstrapIcon from '../../../assets/icons/BootstrapIcon';
-import DjangoIcon from '../../../assets/icons/DjangoIcon';
+import BootstrapIcon from '../../../assets/icons/FrameworkIcons/BootstrapIcon';
+import DjangoIcon from '../../../assets/icons/FrameworkIcons/DjangoIcon';
 import FirebaseIcon from '../../../assets/icons/FirebaseIcon';
 import GitIcon from '../../../assets/icons/GitIcon';
 import GitlabIcon from '../../../assets/icons/GitlabIcon';
-import IonicIcon from '../../../assets/icons/IonicIcon';
-import ReactFlowIcon from '../../../assets/icons/ReactFlowIcon';
-import ReactIcon from '../../../assets/icons/ReactIcon';
-import SanityIcon from '../../../assets/icons/SanityIcon';
+import IonicIcon from '../../../assets/icons/FrameworkIcons/IonicIcon';
+import ReactFlowIcon from '../../../assets/icons/FrameworkIcons/ReactFlowIcon';
+import ReactIcon from '../../../assets/icons/FrameworkIcons/ReactIcon';
+import SanityIcon from '../../../assets/icons/FrameworkIcons/SanityIcon';
 import TailwindIcon from '../../../assets/icons/TailwindIcon';
 import Typescript from '../../../assets/icons/Typescript';
-import ViteIcon from '../../../assets/icons/ViteIcon';
+import ViteIcon from '../../../assets/icons/FrameworkIcons/ViteIcon';
 import GithubIcon from '../../../assets/icons/socialIcons/GithubIcon';
+import FlutterIcon from '../../../assets/icons/FrameworkIcons/FlutterIcon';
+import FormikIcon from '../../../assets/icons/LibraryIcons/FormikIcon';
+import ApolloClientIcon from '../../../assets/icons/LibraryIcons/ApolloClientIcon';
+import MaterialUIIcon from '../../../assets/icons/LibraryIcons/MaterialUIIcon';
+import CypressIcon from '../../../assets/icons/LibraryIcons/CypressIcon';
+import DartIcon from '../../../assets/icons/LanguageIcons/DartIcon';
+import LumenIcon from '../../../assets/icons/FrameworkIcons/LumenIcon';
+import PhpIcon from '../../../assets/icons/LanguageIcons/PhpIcon';
+import AxiosIcon from '../../../assets/icons/LibraryIcons/AxiosIcon';
 
 export const ICONS_PROJECTS = {
     angular: {
@@ -93,5 +102,41 @@ export const ICONS_PROJECTS = {
     vite: {
       icon: <ViteIcon wrapperClassName='h-[19px] w-[19px]'/>,
       description: 'Vite'
+    },
+    flutter: {
+      icon: <FlutterIcon wrapperClassName='h-[33px] w-[33px]'/>,
+      description: 'Flutter'
+    },
+    formik: {
+      icon: <FormikIcon wrapperClassName='h-[20px] w-[20px]'/>,
+      description: 'Formik'
+    },
+    apollo_client: {
+      icon: <ApolloClientIcon wrapperClassName='h-[20px] w-[20px]'/>,
+      description: 'Apollo Client'
+    },
+    material_ui: {
+      icon: <MaterialUIIcon wrapperClassName='h-[20px] w-[21px]'/>,
+      description: 'Material UI'
+    },
+    cypress: {
+      icon: <CypressIcon wrapperClassName='h-[20px] w-[20px]'/>,
+      description: 'Cypress'
+    },
+    dart: {
+      icon: <DartIcon wrapperClassName='h-[20px] w-[20px]'/>,
+      description: 'Dart'
+    },
+    lumen: {
+      icon: <LumenIcon wrapperClassName='h-[20px] w-[20px]'/>,
+      description: 'Lumen'
+    },
+    php: {
+      icon: <PhpIcon wrapperClassName='h-[28px] w-[30px]'/>,
+      description: 'Php'
+    },
+    axios: {
+      icon: <AxiosIcon wrapperClassName='h-[25px] w-[50px]'/>,
+      description: 'Axios'
     }
 }
