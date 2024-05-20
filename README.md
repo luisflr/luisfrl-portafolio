@@ -7,6 +7,8 @@ Hi everyone! This is my portfolio and it was created with the purpose of exposin
 
 For the construction of this portfolio I used the following technologies:
 
+#### Frontend
+
 <ul>
   <li>
     <a href='https://developer.mozilla.org/es/docs/Web/JavaScript'>Javascript</a> <img src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-plain.svg' alt='Javascript logo' width='20' height='20'/>
@@ -20,6 +22,24 @@ For the construction of this portfolio I used the following technologies:
   <li>
     <a href='https://www.framer.com/motion/'>Framer-motion</a>
     <img src='https://cdn.iconscout.com/icon/free/png-512/free-framer-2296068-1912027.png?f=avif&w=256' alt='Framer logo' width='22' height='22'/>
+  </li>
+</ul>
+
+
+#### Backend
+
+<ul>
+  <li>
+    <a href='https://nodejs.org/en/learn/getting-started/introduction-to-nodejs'>NodeJS</a> <img src='https://img.icons8.com/?size=100&id=54087&format=png&color=000000' alt='Javascript logo' width='20' height='20'/>
+  </li>
+  <li>
+    <a href='https://expressjs.com/es/starter/installing.html'>Express</a> <img src='https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000' alt='React logo' width='20' height='20'/>
+  </li>
+  <li>
+    <a href='https://www.npmjs.com/package/mongoose'>Mongoose</a> <img src='https://img.icons8.com/?size=100&id=gKfcEStXI1Hm&format=png&color=000000' alt='React logo' width='20' height='20'/>
+  </li>
+  <li>
+    <a href='https://www.mongodb.com/atlas'>MongoDB </a><img src='https://img.icons8.com/?size=100&id=74402&format=png&color=000000' alt='Tailwind logo' width='22' height='22'/>
   </li>
 </ul>
 
