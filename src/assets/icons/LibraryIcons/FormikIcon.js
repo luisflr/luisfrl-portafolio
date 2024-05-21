@@ -7,7 +7,7 @@ function FormikIcon({ wrapperClassName='' }) {
       xmlns="http://www.w3.org/2000/svg"
       className={wrapperClassName}
     >
-      <path d="m-.0001948.00485276h34.699667v34.699667h-34.699667z" stroke-width=".1187196918"/>
+      <path d="m-.0001948.00485276h34.699667v34.699667h-34.699667z" strokeWidth=".1187196918"/>
       <g fill="#A3B3BC" transform="matrix(.400018502 0 0 .400018502 5.34987738 .55385626)">
         <path d="m38.869 0 9.694 5.5746-38.176 21.954-9.694-5.5747z"/>
         <path d="m48.954 6.7451-37.936 21.806-.0013 11.032 37.936-21.806z"/>

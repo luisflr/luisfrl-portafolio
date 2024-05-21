@@ -1,5 +1,6 @@
 /* Window button classes  */
 export const CLASS_BUTTON = `block py-2 pr-4 pl-3 
+  transition transform
   text-[#e1e0e0] hover:text-transparent hover:bg-clip-text 
   hover:bg-gradient-to-r hover:from-blue hover:to-cyan
   hover:bg-transparent lg:p-0 outline-none`;

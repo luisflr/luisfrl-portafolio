@@ -1,8 +1,9 @@
 import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
+
 import Main from './views/Main';
 import { NotFoundPage } from './views/Pages';
-import { Analytics } from '@vercel/analytics/react';
 import AllPersonalProjects from './views/AllPersonalProjects';
 import Footer from './components/Footer';
 import useMain from './views/useMain';
@@ -21,8 +22,8 @@ function App() {
         <Route path='/all-personal-projects' element={<AllPersonalProjects />} />
       </Routes>
       <Footer />
-    </Suspense>
-    <Analytics />
+    </Suspense> 
+    <Analytics /> 
     </>
   );
 }

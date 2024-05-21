@@ -11,7 +11,7 @@ function Cards({
  }) {
   return (
     <motion.div
-      className='max-w-[400px] rounded-lg bg-transparent
+      className='max-w-[400px]  bg-transparent
         mb-20 border border-[#ffffff1a]'
       initial= {{ y: 50, opacity: 0 }}
       whileHover={{ 
@@ -33,10 +33,10 @@ function Cards({
         data-te-ripple-color='light'>
         <img
           className='
-            w-full h-full object-contain rounded-t-lg border-b 
+            w-full h-full object-contain border-b 
             bg-background border-[#ffffff1a] opacity-70
             transition transform
-            hover:opacity-100 hover:scale-105 hover:rounded-lg
+            hover:opacity-100 hover:scale-105
             hover:shadow-[0_0_5px_cyan]
             '
           src={image}

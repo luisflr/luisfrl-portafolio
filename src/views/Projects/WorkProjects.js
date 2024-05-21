@@ -1,8 +1,6 @@
-
-import { motion } from 'framer-motion';
-
 import Cards from '../../components/Common/Cards';
 import Timeline from '../../components/Timeline/Timeline';
+import Title from '../../components/Title/Title';
 
 
 export default function WorkProjects({ workProjects }) {
@@ -13,20 +11,7 @@ export default function WorkProjects({ workProjects }) {
       
       <div className='h-fit max-w-[1124px] px-5 sm:px-20 md:w-full lg:px-0 lg:w-10/12 flex flex-col justify-center items-center'>
         
-        <motion.p 
-        className='text-3xl flex overflow-hidden text-default-text font-bold font-sans mb-8 pr-2 whitespace-nowrap'
-        initial={{ width: '0' }}
-        whileInView={{ 
-          width: 'fit-content',
-          transition: {
-            delay: 0.1,
-            duration: 0.8
-          }
-        }}
-        viewport={{ once: true }}  
-        >
-          · Work Projects
-        </motion.p>
+        <Title textTitle='Work Projects'/>
 
         {workProjects 
           ? <>

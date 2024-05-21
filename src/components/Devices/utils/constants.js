@@ -25,6 +25,12 @@ import DartIcon from '../../../assets/icons/LanguageIcons/DartIcon';
 import LumenIcon from '../../../assets/icons/FrameworkIcons/LumenIcon';
 import PhpIcon from '../../../assets/icons/LanguageIcons/PhpIcon';
 import AxiosIcon from '../../../assets/icons/LibraryIcons/AxiosIcon';
+import SassIcon from '../../../assets/icons/LibraryIcons/SassIcon';
+import NodeJSIcon from '../../../assets/icons/ToolIcons/NodeJSIcon';
+import ExpressJsIcon from '../../../assets/icons/FrameworkIcons/ExpressJsIcon';
+import SequelizeIcon from '../../../assets/icons/LibraryIcons/SequelizeIcon';
+import PostgresqlIcon from '../../../assets/icons/ToolIcons/PostgresqlIcon';
+import SocketIOIcon from '../../../assets/icons/LibraryIcons/SocketIOIcon';
 
 export const ICONS_PROJECTS = {
     angular: {
@@ -138,5 +144,33 @@ export const ICONS_PROJECTS = {
     axios: {
       icon: <AxiosIcon wrapperClassName='h-[25px] w-[50px]'/>,
       description: 'Axios'
+    },
+    sass: {
+      icon: <SassIcon wrapperClassName='h-[25px] w-[25px]'/>,
+      description: 'Sass'
+    },
+    angular_material: {
+      icon: <AngularCDKIcon wrapperClassName='fill-default-text h-[19px] w-[19px]'/>,
+      description: 'Angular Material'
+    },
+    nodejs: {
+      icon: <NodeJSIcon wrapperClassName='fill-default-text h-[23px] w-[23px]'/>,
+      description: 'Node Js'
+    },
+    express: {
+      icon: <ExpressJsIcon wrapperClassName='h-[19px] w-[19px]'/>,
+      description: 'Express'
+    },
+    sequelize: {
+      icon: <SequelizeIcon wrapperClassName='h-[19px] w-[19px]'/>,
+      description: 'Sequelize ORM'
+    },
+    postgresql: {
+      icon: <PostgresqlIcon wrapperClassName='h-[19px] w-[19px]'/>,
+      description: 'PostgreSql'
+    },
+    socket_io: {
+      icon: <SocketIOIcon wrapperClassName='h-[19px] w-[19px]'/>,
+      description: 'Socket IO'
     }
 }

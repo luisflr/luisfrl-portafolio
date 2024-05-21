@@ -10,13 +10,13 @@ import {
   CLASS_BUTTON, 
   SELECTED_CLASS_BUTTON
 } from './utils/constants';
-
+import HomeIcon from '../../../../assets/icons/PagesTimeLineIcons/HomeIcon';
 
 function WindowNavbar({ buttons, setActivePage, activePage }) {
   const { 
-    selectedButton, show, moveCurrentPage, onActivePage 
+    selectedButton, show, navigate,
+    moveCurrentPage, onActivePage 
   } = useWindowNavbar({ setActivePage });
-  
 
   return (
     <header className={`${show ? 'translate-y-0' : '-translate-y-[80px]'} transition ease-linear duration-200 fixed w-full z-20`}>
@@ -62,7 +62,15 @@ function WindowNavbar({ buttons, setActivePage, activePage }) {
           
           <div className="xl:flex justify-between items-center w-full lg:flex lg:w-auto lg:order-1">
               <ul className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 outline-none font-open-sans text-sm stroke-none">
-                  {buttons.map((button, i) => 
+                  {window.location.pathname === '/all-personal-projects' ? 
+                  <button onClick={() => navigate('/')} className={`${CLASS_BUTTON} flex group `}>
+                    <HomeIcon 
+                      wrapperClassName='group-hover:fill-cyan fill-default-text w-4 h-4
+                      transition ease-linear mr-1'
+                    />
+                    {buttons[0].label}
+                  </button>
+                  : buttons.map((button, i) => 
                     <motion.li 
                       custom={i}
                       initial="hidden"
@@ -88,7 +96,8 @@ function WindowNavbar({ buttons, setActivePage, activePage }) {
                           <motion.div className="absolute bottom-0 bg-gradient-to-r from-blue to-cyan h-[1px] left-0 right-0 z-10" layoutId="underline" />
                         ) : null}
                     </motion.li>
-                  )}
+                  )
+                  }
               </ul>
           </div>
         </div>   
