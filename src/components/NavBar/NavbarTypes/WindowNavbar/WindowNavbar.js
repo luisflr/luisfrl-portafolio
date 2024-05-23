@@ -62,15 +62,8 @@ function WindowNavbar({ buttons, setActivePage, activePage }) {
           
           <div className="xl:flex justify-between items-center w-full lg:flex lg:w-auto lg:order-1">
               <ul className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 outline-none font-open-sans text-sm stroke-none">
-                  {window.location.pathname === '/all-personal-projects' ? 
-                  <button onClick={() => navigate('/')} className={`${CLASS_BUTTON} flex group `}>
-                    <HomeIcon 
-                      wrapperClassName='group-hover:fill-cyan fill-default-text w-4 h-4
-                      transition ease-linear mr-1'
-                    />
-                    {buttons[0].label}
-                  </button>
-                  : buttons.map((button, i) => 
+                  {window.location.pathname === '/' 
+                  ? buttons.map((button, i) => 
                     <motion.li 
                       custom={i}
                       initial="hidden"
@@ -97,6 +90,13 @@ function WindowNavbar({ buttons, setActivePage, activePage }) {
                         ) : null}
                     </motion.li>
                   )
+                  :<button onClick={() => navigate('/')} className={`${CLASS_BUTTON} flex group `}>
+                    <HomeIcon 
+                      wrapperClassName='group-hover:fill-cyan fill-default-text w-4 h-4
+                      transition ease-linear mr-1'
+                    />
+                    {buttons[0].label}
+                  </button>
                   }
               </ul>
           </div>
