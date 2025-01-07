@@ -31,6 +31,8 @@ import ExpressJsIcon from '../../../assets/icons/FrameworkIcons/ExpressJsIcon';
 import SequelizeIcon from '../../../assets/icons/LibraryIcons/SequelizeIcon';
 import PostgresqlIcon from '../../../assets/icons/ToolIcons/PostgresqlIcon';
 import SocketIOIcon from '../../../assets/icons/LibraryIcons/SocketIOIcon';
+import LaravelIcon from '../../../assets/icons/FrameworkIcons/LaravelIcon';
+import MongoDBIcon from '../../../assets/icons/FrameworkIcons/MongoDBIcon';
 
 export const ICONS_PROJECTS = {
     angular: {
@@ -172,5 +174,13 @@ export const ICONS_PROJECTS = {
     socket_io: {
       icon: <SocketIOIcon wrapperClassName='h-[19px] w-[19px]'/>,
       description: 'Socket IO'
+    },
+    laravel: {
+      icon: <LaravelIcon wrapperClassName='fill-default-text h-[19px] w-[19px]'/>,
+      description: 'Laravel PHP'
+    },
+    mongodb: {
+      icon: <MongoDBIcon wrapperClassName='h-[19px] w-[19px]'/>,
+      description: 'MongoDB'
     }
 }
