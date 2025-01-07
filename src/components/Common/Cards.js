@@ -11,7 +11,7 @@ function Cards({
  }) {
   return (
     <motion.div
-      className='max-w-[400px]  bg-transparent
+      className='max-w-[400px] h-[620px]  bg-transparent
         mb-20 border border-[#ffffff1a]'
       initial= {{ y: 50, opacity: 0 }}
       whileHover={{ 
@@ -56,14 +56,14 @@ function Cards({
           <Links linksProject={linksProject} />
         </div>
       </div>
-      <div className='pl-6 pr-6 mt-2 text-default-text max-h-[180px] overflow-y-auto'>
-        <p className='mb-4 text-base text-neutral-600'>
+      <div className='pl-6 pr-6 mt-2 text-default-text max-h-[120px] overflow-y-auto'>
+        <p className='mb-3 text-base text-neutral-600'>
           {description}
         </p>
       </div>
       <div className='mt-2 mb-6 pl-3'>
         <h3 className='text-default-text ml-3 w-fit'>Tech Stack:</h3>
-        <ul className='flex flex-col pl-3 text-default-text mt-2 space-y-1'>
+        <ul className='flex flex-col pl-3 text-default-text mt-2 space-y-1 overflow-y-auto max-h-[140px]'>
           {techStack.map((tech, idx) => 
             <li key={idx}>
             <div className='w-[230px] group flex relative justify-between px-3'>
