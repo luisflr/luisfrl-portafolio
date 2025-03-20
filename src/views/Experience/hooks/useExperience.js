@@ -3,10 +3,15 @@ import { get } from '../../../services/API';
 
 function useExperience() {
   const [works, setWorks] = useState(null)
-  const [activeWork, setActiveWork] = useState('1');
-  const [findWork, setFindWork] = useState(0)
+  const [activeWork, setActiveWork] = useState('');
+  const [currentWorkData, setCurrentWorkData] = useState()
 
-  const updateWorkDescription = () => setFindWork(works.find(work => work.number_of_work === activeWork))
+  const updateWorkDescription = () => {
+    if (activeWork) setCurrentWorkData(works.find(work => work.number_of_work === activeWork))
+    else {
+      setActiveWork(`${works.length}`)
+    }
+  }
   
   const loadWorks = async () => {
     await get('/works').then(res => {
@@ -25,7 +30,7 @@ function useExperience() {
   return {
     /* States */
     activeWork,
-    findWork,
+    currentWorkData,
     works,
 
     /* State functions */
