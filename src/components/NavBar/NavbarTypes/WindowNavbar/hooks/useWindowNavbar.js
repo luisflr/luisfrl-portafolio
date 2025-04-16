@@ -18,7 +18,7 @@ export const useWindowNavbar = ({ setActivePage }) => {
     return () => {
         window.removeEventListener('scroll', controlNavbar)
     }
-  }, [prevScroll]);//eslint-disable-line
+  }, [prevScroll]);
 
   const onActivePage = (to) => setSelectedButton(to)
 

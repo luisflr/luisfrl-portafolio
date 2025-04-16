@@ -11,7 +11,7 @@ export default function WorkProjects({ workProjects }) {
       
       <div className='h-fit max-w-[1124px] px-5 sm:px-20 md:w-full lg:px-0 lg:w-10/12 flex flex-col justify-center items-center'>
         
-        <Title textTitle='Work Projects'/>
+        <Title textTitle='Some of my work projects'/>
 
         {workProjects 
           ? <>

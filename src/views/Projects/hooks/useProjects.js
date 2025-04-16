@@ -8,7 +8,7 @@ const useProjects = () => {
   const loadProjects = async () => {
     await get('/projects').then(res => {
       setWorkProjects(res?.data.filter(data => data.type_project === 'Work'))
-      setPersonalProjects(res?.data.filter(data => data.type_project === 'personal').slice(0,3))
+      setPersonalProjects(res?.data.filter(data => data.type_project === 'personal' && data.is_active).slice(0,3))
     });
   }
 
